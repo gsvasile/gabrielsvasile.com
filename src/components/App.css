@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Merriweather"),
+    url("../fonts/MerriweatherSans-Regular.ttf") format("truetype");
+}
+
+.App {
+  font-family: "Merriweather";
+  text-align: center;
+}
