@@ -2,6 +2,6 @@
 
 Website for Gabriel Vasile, Software Engineer
 
-### `npm start`
+### `Website`
 
-[GabrielSVasile.com]('https://www.gabrielsvasile.com)
+[GabrielSVasile.com](https://www.gabrielsvasile.com)
