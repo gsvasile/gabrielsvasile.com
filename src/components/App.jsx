@@ -1,6 +1,7 @@
 import React from 'react';
 import Menu from './menu/Menu';
 import Home from './sections/home/Home';
+import Experience from './sections/experience/Experience';
 import './App.css';
 
 const App = () => {
@@ -9,6 +10,9 @@ const App = () => {
       <div className='App'>
         <Menu />
         <Home />
+        <main>
+          <Experience />
+        </main>
       </div>
     </React.Fragment>
   );

@@ -1,0 +1,9 @@
+#experience {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
+    url("../../../images/bg-experience-1920x2559.jpg");
+  background-attachment: fixed;
+}
+
+.experience-header {
+  color: #cf9e18;
+}
