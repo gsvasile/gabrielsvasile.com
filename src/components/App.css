@@ -6,7 +6,27 @@
     url("../fonts/MerriweatherSans-Regular.ttf") format("truetype");
 }
 
+* {
+  box-sizing: border-box;
+  font-display: swap;
+  font-weight: 300;
+  font-family: "Merriweather", sans-serif;
+  scroll-behavior: smooth;
+}
+
 .App {
-  font-family: "Merriweather";
   text-align: center;
+}
+
+.less-wide {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .wider-only {
+    display: none;
+  }
+  .less-wide {
+    display: inline-block;
+  }
 }

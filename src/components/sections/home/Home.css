@@ -1,16 +1,23 @@
-/* a {
-  transition: all 0.2s ease-in-out;
-} */
-
 .home-grow {
   transition: all 0.3s ease-in-out;
+  height: 4em;
 }
 
 .home-grow:hover {
   opacity: 1;
-  transform: scale(1.05);
+  transform: scaleY(0.98) scaleX(1.1);
+}
+
+.iconLogo {
+  height: 4em;
+}
+
+.iconBug {
+  height: 4em;
 }
 
 #home {
-  background-image: url("../../../images/backgrounds/bg-home.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
+    url("../../../images/bg-home.jpg");
+  background-attachment: fixed;
 }

@@ -1,7 +1,8 @@
 
 const icons = {
-    githubmark: require('./images/GitHub-Mark-Light-64px.png'),
-    githublogo: require('./images/GitHub_Logo_White.png'),
+    githubbug: require('./images/GitHub-Mark-Light-64px.png'),
+    githublogo: require('./images/GitHub_LogoBug_White_Merge.png'),
+    linkedinbug: require('./images/LI-In-Bug.png'),
     linkedinlogo: require('./images/lilogo.png')
 };
 
