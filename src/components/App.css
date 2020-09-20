@@ -23,7 +23,7 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .wider-only {
+  .wide-only {
     display: none;
   }
   .less-wide {

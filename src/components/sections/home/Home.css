@@ -5,7 +5,7 @@
 
 .home-grow:hover {
   opacity: 1;
-  transform: scaleY(0.98) scaleX(1.1);
+  transform: scale(1.1);
 }
 
 .iconLogo {

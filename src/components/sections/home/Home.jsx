@@ -16,7 +16,7 @@ const Home = () => {
                         rel="noopener noreferrer"
                     >
                         <img
-                            className='wider-only iconLogo'
+                            className='wide-only iconLogo'
                             alt='LinkedIn® Logo'
                             src={Icons.linkedinlogo}
                         />
@@ -34,7 +34,7 @@ const Home = () => {
                         rel="noopener noreferrer"
                     >
                         <img
-                            className='wider-only iconLogo'
+                            className='wide-only iconLogo'
                             alt='GitHub Logo'
                             src={Icons.githublogo}
                         />
