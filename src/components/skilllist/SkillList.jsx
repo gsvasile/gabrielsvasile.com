@@ -3,8 +3,7 @@ import './SkillList.css';
 
 const SkillList = ({ skillItems }) => {
 
-    console.log('skillItems (inside SkillList) : ', skillItems);
-
+    // Build the same list of skill items, but without symbols, etc. included.
     const skillItemsForCss = skillItems.map(skillItem => {
         let skillItemForCss = '';
         switch (skillItem) {
@@ -23,7 +22,7 @@ const SkillList = ({ skillItems }) => {
     });
 
     return (
-        <div className='skillItems flex flex-wrap justify-center items-center mb2 mt1'>
+        <div>
             {skillItems.map((skillItem, index) => (
                 <div
                     key={skillItem}
@@ -35,6 +34,5 @@ const SkillList = ({ skillItems }) => {
         </div>
     );
 }
-
 
 export default SkillList;

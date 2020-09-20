@@ -1,46 +1,31 @@
-/* .skillItem {
-    color: ${props => colors[props.tag] && colors[props.tag].color};
-  background: rgba(0,0,0,0.50);
-  border-color: ${props => colors[props.tag] && colors[props.tag].border};
-  display: inline-block;
-  line-height: 20px;
-  height: 22px;
-  padding: 0 7px;
-  border-radius: 4px;
-  border-style: solid;
-  border-width: 1px;
-  font-size: 12px;
-  white-space: nowrap;
-  margin-bottom: 5px;
-} */
-
 .skillItem {
   display: inline-block;
   background: rgba(0, 0, 0, 0.5);
-  line-height: 20px;
-  height: 22px;
-  font-size: 15px;
   border-radius: 4px;
   border-style: solid;
   border-width: 1px;
+  line-height: 22px;
+  height: 22px;
   white-space: nowrap;
-  padding: 0 7px;
-  margin-bottom: 5px;
+  padding: 0 8px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-right: 10px;
 }
 
 /* Languages */
 .CSharp {
   color: rgb(116, 178, 253);
-  border-color: rgba(200, 245, 105, 0.5);
+  border-color: rgba(183, 218, 255, 0.9);
 }
 
 .CPlusPlus {
-  color: rgb(200, 201, 201);
-  border-color: rgba(171, 253, 116, 0.5);
+  color: rgba(200, 201, 201, 0.8);
+  border-color: rgba(171, 253, 116, 0.4);
 }
 
 .LUA {
-  color: rgb(171, 184, 236);
+  color: rgba(171, 184, 236, 0.8);
   border-color: rgba(171, 253, 116, 0.5);
 }
 
@@ -65,7 +50,7 @@
 }
 
 .PHP {
-  color: rgb(151, 203, 245);
+  color: rgba(151, 203, 245);
   border-color: rgba(171, 253, 116, 0.5);
 }
 

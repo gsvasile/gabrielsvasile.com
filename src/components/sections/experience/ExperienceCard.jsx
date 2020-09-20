@@ -17,23 +17,20 @@ const ExperienceCard = (
     // Only include a subtitle if it exists.
     const subTitlePart = (subTitle) ? <span className='wide-only'> - {subTitle}</span> : <span />;
 
-    console.log('skills : ', skills);
-
     // It is assumed the experience will come through as an object with just
     // experience description. Build an array to map to list in the card later.
     const getExperienceDescription = (experience) => {
-        let descriptions = [];
+        const descriptions = [];
         for (const description in experience) {
             descriptions.push(experience[description]);
         }
         return descriptions;
     }
-
     const experienceToList = getExperienceDescription(experience);
 
     return (
-        <article className='bg-black-80 ba white pa2 mb3'>
-            <header className='cardHead flex justify-between items-center bb fw7 pb1'>
+        <article className='bg-black-80 ba white pa1 mb3'>
+            <header className='flex justify-between items-center fw7 pb1 bb b--white-70'>
                 <div className='f3'>
                     {title} {subTitlePart}
                     <span className='o-50'> at</span>
@@ -48,11 +45,11 @@ const ExperienceCard = (
                 </div>
                 <div>{dates}</div>
             </header>
-            <div className='flex flex-column pt1'>
+            <div>
                 <SkillList
                     skillItems={skills}
                 />
-                <div className='db'>
+                <div>
                     {experienceToList.map((point, index) => (
                         <span
                             key={index}

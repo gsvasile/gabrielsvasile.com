@@ -40,7 +40,6 @@ const ExperienceList = () => {
             bullet4: '• Assisted with turnkey quotes and material procurement for customers.',
         }
     ];
-    console.log('experience list : ', experienceList);
 
     return (
         <React.Fragment>
