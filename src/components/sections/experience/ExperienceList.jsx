@@ -11,8 +11,8 @@ const ExperienceList = () => {
             company: 'IGT',
             link: 'https://igt.com/',
             dates: 'April 2011 - June 2020',
-            skills: ['C#', 'C++', 'lua', 'Unity3D'],
-            bullet1: '• Developed casino games using C# and Unity3D and C++ with LUA.',
+            skills: ['C#', 'Unity3D', 'C++', 'LUA'],
+            bullet1: '• Developed casino games with C# and Unity3D, and C++ with LUA.',
             bullet2: '• Worked on teams that included Game Design, Sound, Art, Technical Art, and other Software Engineers'
         },
         {
@@ -21,7 +21,7 @@ const ExperienceList = () => {
             subTitle: 'Produce Assurance',
             company: 'IGT',
             link: 'https://igt.com/',
-            skills: ['C#', 'VBA', 'MS Excel'],
+            skills: ['C#', 'VBA'],
             dates: 'April 2006 - April 2011',
             bullet1: '• Developed and maintained test tools using C# and VBA that improved testers\' performance.',
             bullet2: '• Fully tested all aspects of Stepper and Video slot game software.',
@@ -33,7 +33,7 @@ const ExperienceList = () => {
             company: 'Vital Systems',
             link: 'https://vitalsystems.com/',
             dates: 'March 2005 - March 2006',
-            skills: ['PHP', 'SQL', 'MS Access'],
+            skills: ['PHP', 'SQLServer', 'MSAccess'],
             bullet1: '• Developed and maintained the in-house ERP software system using VBA, MS Access, and SQL Server.',
             bullet2: '• Renovated and enhanced the company website using HTML, PHP and SQL.',
             bullet3: '• Led a team that ran and verified an automated system for mounting circuits onto a PCB.',

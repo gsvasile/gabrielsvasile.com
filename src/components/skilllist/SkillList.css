@@ -1,0 +1,123 @@
+/* .skillItem {
+    color: ${props => colors[props.tag] && colors[props.tag].color};
+  background: rgba(0,0,0,0.50);
+  border-color: ${props => colors[props.tag] && colors[props.tag].border};
+  display: inline-block;
+  line-height: 20px;
+  height: 22px;
+  padding: 0 7px;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 12px;
+  white-space: nowrap;
+  margin-bottom: 5px;
+} */
+
+.skillItem {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.5);
+  line-height: 20px;
+  height: 22px;
+  font-size: 15px;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  white-space: nowrap;
+  padding: 0 7px;
+  margin-bottom: 5px;
+}
+
+/* Languages */
+.CSharp {
+  color: rgb(116, 178, 253);
+  border-color: rgba(200, 245, 105, 0.5);
+}
+
+.CPlusPlus {
+  color: rgb(200, 201, 201);
+  border-color: rgba(171, 253, 116, 0.5);
+}
+
+.LUA {
+  color: rgb(171, 184, 236);
+  border-color: rgba(171, 253, 116, 0.5);
+}
+
+.JavaScript {
+  color: rgb(247, 223, 30);
+  border-color: rgba(171, 253, 116, 0.5);
+}
+
+.Docker {
+  color: rgb(56, 170, 255);
+  border-color: rgba(56, 170, 255, 0.5);
+}
+
+.Python {
+  color: rgb(125, 188, 241);
+  border-color: rgba(171, 253, 116, 0.5);
+}
+
+.VBA {
+  color: rgb(151, 203, 245);
+  border-color: rgba(171, 253, 116, 0.5);
+}
+
+.PHP {
+  color: rgb(151, 203, 245);
+  border-color: rgba(171, 253, 116, 0.5);
+}
+
+/* Libraries */
+.ES6 {
+  color: rgb(247, 223, 30);
+  border-color: rgba(247, 223, 30, 0.5);
+}
+
+.React {
+  color: rgb(97, 218, 251);
+  border-color: rgba(247, 223, 30, 0.5);
+}
+
+.Tachyons {
+  color: rgb(255, 152, 187);
+  border-color: rgba(247, 223, 30, 0.5);
+}
+
+.Redux {
+  color: rgb(188, 144, 255);
+  border-color: rgba(188, 144, 255, 0.5);
+}
+
+.Node.js {
+  color: rgb(102, 210, 100);
+  border-color: rgba(102, 210, 100, 0.5);
+}
+
+/* Databases */
+.PostgreSQL {
+  color: rgb(220, 141, 116);
+  border-color: rgba(15, 203, 245, 0.5);
+}
+
+.MySQL {
+  color: rgb(202, 125, 102);
+  border-color: rgba(15, 203, 245, 0.5);
+}
+
+.SQLServer {
+  color: rgb(219, 141, 96);
+  border-color: rgba(15, 203, 245, 0.5);
+}
+
+.MSAccess {
+  color: rgb(218, 72, 79);
+  border-color: rgba(15, 203, 245, 0.5);
+}
+
+/* Game Engines */
+.Unity3D {
+  color: rgb(194, 59, 12);
+  border-color: rgba(194, 59, 12, 0.5);
+}

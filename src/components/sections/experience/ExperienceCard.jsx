@@ -1,4 +1,5 @@
 import React from 'react';
+import SkillList from '../../skilllist/SkillList';
 import './ExperienceCard.css';
 
 const ExperienceCard = (
@@ -16,6 +17,8 @@ const ExperienceCard = (
     // Only include a subtitle if it exists.
     const subTitlePart = (subTitle) ? <span className='wide-only'> - {subTitle}</span> : <span />;
 
+    console.log('skills : ', skills);
+
     // It is assumed the experience will come through as an object with just
     // experience description. Build an array to map to list in the card later.
     const getExperienceDescription = (experience) => {
@@ -30,7 +33,7 @@ const ExperienceCard = (
 
     return (
         <article className='bg-black-80 ba white pa2 mb3'>
-            <header className='cardHead flex justify-between white items-center bb fw7 pb1'>
+            <header className='cardHead flex justify-between items-center bb fw7 pb1'>
                 <div className='f3'>
                     {title} {subTitlePart}
                     <span className='o-50'> at</span>
@@ -46,9 +49,9 @@ const ExperienceCard = (
                 <div>{dates}</div>
             </header>
             <div className='flex flex-column pt1'>
-                <div>
-                    Skill
-                </div>
+                <SkillList
+                    skillItems={skills}
+                />
                 <div className='db'>
                     {experienceToList.map((point, index) => (
                         <span
