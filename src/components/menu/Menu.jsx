@@ -7,6 +7,18 @@ const NavWrapper = styled.div.attrs({
     background-color: rgb(84 67 25);
 `;
 
+const Link = styled.a.attrs({
+    className: 'link white-90'
+})``;
+
+const NamedLink = styled(Link).attrs({
+    className: 'ml4 ttu fw5 f4'
+})``;
+
+const NavLink = styled(Link).attrs({
+    className: 'mr3 f6'
+})``;
+
 const Menu = () => {
     const links = [
         { link: '#home', label: 'Home' },
@@ -20,12 +32,12 @@ const Menu = () => {
     return (
         <nav>
             <NavWrapper>
-                <a className='link white-90 ml4 ttu fw5 f4' href='#home'>Gabriel Vasile</a>
+                <NamedLink href='#home'>Gabriel Vasile</NamedLink>
                 <div>
                     {links.map(({ link, label }) => (
-                        <a key={label} className='link white-90 mr3 f6' href={link}>
+                        <NavLink key={label} href={link}>
                             {label}
-                        </a>
+                        </NavLink>
                     ))}
                 </div>
             </NavWrapper>
