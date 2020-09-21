@@ -78,12 +78,9 @@ const CompanyLink = styled.a.attrs({
 })``;
 
 const DescriptionLine = styled.span.attrs({
-    className: 'pb1'
+    className: 'flex tl f5 pb1'
 })`
-    display: flex;
-    text-align: left;
     color: rgb(201, 183, 166);
-    font-size: 1em;
 
     @media only screen and (max-width: 767px) {
         font-size: 15px;
