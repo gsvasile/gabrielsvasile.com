@@ -4,9 +4,10 @@ import './Menu.css';
 const Menu = () => {
     const links = [
         { link: '#home', label: 'Home' },
-        { link: '#skills', label: 'Skills' },
         { link: '#experience', label: 'Experience' },
         { link: '#portfolio', label: 'Portfolio' },
+        { link: '#skills', label: 'Skills' },
+        { link: '#education', label: 'Education' },
         { link: '#about', label: 'About' }
     ];
 
