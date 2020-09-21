@@ -64,8 +64,13 @@
 }
 
 .Tachyons {
-  color: rgb(255, 152, 187);
-  border-color: rgba(247, 223, 30, 0.5);
+  color: rgb(168, 122, 255);
+  border-color: rgba(168, 122, 255, 0.5);
+}
+
+.StyledComponents {
+  color: rgb(192, 164, 255);
+  border-color: rgba(192, 164, 255, 0.5);
 }
 
 .Redux {

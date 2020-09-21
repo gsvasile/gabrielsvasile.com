@@ -21,6 +21,14 @@ const SkillList = ({ skillItems }) => {
         return skillItemForCss;
     });
 
+    // Contains links to the libraries used.
+    const skillLinks = {
+        'Tachyons': 'http://tachyons.io/',
+        'Styled Components': 'https://styled-components.com/',
+        'React': 'https://reactjs.org/',
+        'Redux': 'https://redux.js.org/'
+    }
+
     return (
         <div>
             {skillItems.map((skillItem, index) => (
