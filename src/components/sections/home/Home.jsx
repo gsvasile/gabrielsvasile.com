@@ -10,7 +10,7 @@ export default function Home() {
             <Description>I am a forward-thinking Software Engineer.</Description>
             <Links>
                 <LinkWrapper>
-                    <Link as='a' href='https://www.linkedin.com/in/gabrielsvasile'>
+                    <Link href='https://www.linkedin.com/in/gabrielsvasile'>
                         <WideImg
                             alt='LinkedIn® Logo'
                             src={Icons.linkedinlogo}
@@ -22,7 +22,7 @@ export default function Home() {
                     </Link>
                 </LinkWrapper>
                 <LinkWrapper>
-                    <Link as='a' href='https://github.com/gsvasile'>
+                    <Link href='https://github.com/gsvasile'>
                         <WideImg
                             alt='GitHub Logo'
                             src={Icons.githublogo}
@@ -73,7 +73,7 @@ const LinkWrapper = styled.div.attrs({
     }
 `;
 
-const Link = styled.div.attrs({
+const Link = styled.a.attrs({
     className: 'link',
     target: '_blank',
     rel: 'noopener noreferrer'

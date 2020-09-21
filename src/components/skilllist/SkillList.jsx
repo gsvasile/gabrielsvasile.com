@@ -1,17 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function SkillList({ skillItems },) {
-    return (
-        <div>
-            {skillItems.map((skillItem, index) => (
-                <SkillItem skillItem={skillItem} key={`skillItem-${skillItem}`}>
-                    {skillItem}
-                </SkillItem>
-            ))}
-        </div>
-    );
-};
+export default ({ skillItems }) =>
+    <React.Fragment>
+        {skillItems.map((skillItem, index) => (
+            <SkillItem skillItem={skillItem} key={`skillItem-${skillItem}`}>
+                {skillItem}
+            </SkillItem>
+        ))}
+    </React.Fragment>;
 
 const SkillItem = styled.div`    
     display: inline-block;
