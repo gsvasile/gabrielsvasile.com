@@ -1,5 +1,23 @@
 import React from 'react';
-import './Menu.css';
+import styled from 'styled-components';
+
+const NavWrapper = styled.div.attrs({
+    className: 'z-2 fixed w-100 o-90 flex content-center justify-between items-center h2 shadow-5'
+})`
+    background-color: rgb(84 67 25);
+`;
+
+const Link = styled.a.attrs({
+    className: 'link white-90'
+})``;
+
+const NamedLink = styled(Link).attrs({
+    className: 'ml4 ttu fw5 f4'
+})``;
+
+const NavLink = styled(Link).attrs({
+    className: 'mr3 f6'
+})``;
 
 const Menu = () => {
     const links = [
@@ -13,16 +31,16 @@ const Menu = () => {
 
     return (
         <nav>
-            <div className='navbar z-2 fixed w-100 o-90 flex content-center justify-between items-center'>
-                <a className='link white-90 ml4 ttu fw5 f4' href='#home'>Gabriel Vasile</a>
+            <NavWrapper>
+                <NamedLink href='#home'>Gabriel Vasile</NamedLink>
                 <div>
                     {links.map(({ link, label }) => (
-                        <a key={label} className='link white-90 mr3 f6' href={link}>
+                        <NavLink key={label} href={link}>
                             {label}
-                        </a>
+                        </NavLink>
                     ))}
                 </div>
-            </div>
+            </NavWrapper>
         </nav>
     );
 }

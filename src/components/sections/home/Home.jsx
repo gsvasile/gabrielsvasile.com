@@ -1,61 +1,92 @@
 import React from 'react';
+import styled from 'styled-components';
 import Icons from '../../icons/icons';
-import './Home.css';
 
-const Home = () => {
+export default function Home() {
     return (
-        <section id='home' className='bg-center cover flex flex-column vh-100 white justify-center'>
-            <p className='f4'>Hello! My name is</p>
-            <h1 className='f1'>Gabriel Vasile.</h1>
-            <p className='f3 tracked'>I am a forward-thinking Software Engineer.</p>
-            <div className='pt6 center w-80'>
-                <div className='home-grow o-80 fl w-50'>
-                    <a className='link'
-                        href='https://www.linkedin.com/in/gabrielsvasile'
-                        target='_blank'
-                        rel="noopener noreferrer"
-                    >
-                        <img
-                            className='wide-only iconLogo'
+        <Section id='home'>
+            <Greetings>Hello! My name is</Greetings>
+            <Name>Gabriel Vasile.</Name>
+            <Description>I am a forward-thinking Software Engineer.</Description>
+            <Links>
+                <LinkWrapper>
+                    <Link href='https://www.linkedin.com/in/gabrielsvasile'>
+                        <WideImg
                             alt='LinkedIn® Logo'
                             src={Icons.linkedinlogo}
                         />
-                        <img
-                            className='less-wide iconBug'
+                        <SmImg
                             alt='LinkedIn® Bug'
                             src={Icons.linkedinbug}
                         />
-                    </a>
-                </div>
-                <div className='home-grow o-80 fl w-50'>
-                    <a className='link'
-                        href='https://github.com/gsvasile'
-                        target='_blank'
-                        rel="noopener noreferrer"
-                    >
-                        <img
-                            className='wide-only iconLogo'
+                    </Link>
+                </LinkWrapper>
+                <LinkWrapper>
+                    <Link href='https://github.com/gsvasile'>
+                        <WideImg
                             alt='GitHub Logo'
                             src={Icons.githublogo}
                         />
-                        <img
-                            className='less-wide iconBug'
+                        <SmImg
                             alt='GitHub Bug'
                             src={Icons.githubbug}
                         />
-                    </a>
-                </div>
-            </div>
-        </section>
+                    </Link>
+                </LinkWrapper>
+            </Links>
+        </Section>
     );
 }
 
+const Section = styled.section.attrs({
+    className: 'bg-center cover flex flex-column vh-100 white justify-center'
+})`
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
+                      url("images/bg-home.jpg");
+    background-attachment: fixed;
+`;
 
+const Greetings = styled.p.attrs({
+    className: 'f4'
+})``;
 
+const Name = styled.h1.attrs({
+    className: 'f1'
+})``;
 
+const Description = styled(Greetings).attrs({
+    className: 'f3 tracked'
+})``;
 
+const Links = styled.div.attrs({
+    className: 'pt6 center w-80'
+})``;
 
+const LinkWrapper = styled.div.attrs({
+    className: 'o-80 fl w-50'
+})`
+    transition: all 0.3s ease-in-out;
+    height: 4em;
+    :hover {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+`;
 
+const Link = styled.a.attrs({
+    className: 'link',
+    target: '_blank',
+    rel: 'noopener noreferrer'
+})``;
 
+const Img = styled.img`
+    height: 4em;
+`;
 
-export default Home
+const WideImg = styled(Img).attrs({
+    className: 'wide-only',
+})``;
+
+const SmImg = styled(WideImg).attrs({
+    className: 'less-wide',
+})``;
