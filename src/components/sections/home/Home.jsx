@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Icons from '../../icons/icons';
+import icons from '../../icons/icons';
+import backgrounds from '../../backgrounds/backgrounds';
 
 export default function Home() {
     return (
@@ -13,11 +14,11 @@ export default function Home() {
                     <Link href='https://www.linkedin.com/in/gabrielsvasile'>
                         <WideImg
                             alt='LinkedIn® Logo'
-                            src={Icons.linkedinlogo}
+                            src={icons.linkedinlogo}
                         />
                         <SmImg
                             alt='LinkedIn® Bug'
-                            src={Icons.linkedinbug}
+                            src={icons.linkedinbug}
                         />
                     </Link>
                 </LinkWrapper>
@@ -25,11 +26,11 @@ export default function Home() {
                     <Link href='https://github.com/gsvasile'>
                         <WideImg
                             alt='GitHub Logo'
-                            src={Icons.githublogo}
+                            src={icons.githublogo}
                         />
                         <SmImg
                             alt='GitHub Bug'
-                            src={Icons.githubbug}
+                            src={icons.githubbug}
                         />
                     </Link>
                 </LinkWrapper>
@@ -42,7 +43,7 @@ const Section = styled.section.attrs({
     className: 'bg-center cover flex flex-column vh-100 white justify-center'
 })`
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
-                      url("images/bg-home.jpg");
+                      url(${backgrounds.home_large});
     background-attachment: fixed;
 `;
 
