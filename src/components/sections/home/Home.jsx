@@ -45,6 +45,11 @@ const Section = styled.section.attrs({
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
                       url(${backgrounds.home_large});
     background-attachment: fixed;
+
+    @media only screen and (max-width: 767px) {        
+        background-image:   linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+                            url(${backgrounds.home_small});
+    };
 `;
 
 const Greetings = styled.p.attrs({

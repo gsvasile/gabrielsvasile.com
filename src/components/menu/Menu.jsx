@@ -9,7 +9,12 @@ const NavWrapper = styled.div.attrs({
 
 const Link = styled.a.attrs({
     className: 'link white-90'
-})``;
+})`
+    
+    @media only screen and (max-width: 767px) {        
+        color: white;
+    };
+`;
 
 const NamedLink = styled(Link).attrs({
     className: 'ml4 ttu fw5 f4'

@@ -10,17 +10,9 @@ export default ({ skillItems }) =>
         ))}
     </React.Fragment>;
 
-const SkillItem = styled.div`    
-    display: inline-block;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 4px;
-    border-style: solid;
-    border-width: 1px;
-    line-height: 22px;
-    height: 22px;
-    white-space: nowrap;
-    padding: 0 5px;
-    margin: 7px;
+const SkillItem = styled.div.attrs({
+    className: 'dib bg-black-50 br-pill b--solid bw1 ln-solid nowrap pt0 pb0 pr1 pl1 ma2'
+})`    
     color: ${props => skillColors[props.skillItem] && skillColors[props.skillItem].color};
     border-color: ${props => skillColors[props.skillItem] && skillColors[props.skillItem].borderColor};
 `;
