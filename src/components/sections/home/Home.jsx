@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import icons from '../../icons/icons';
-import backgrounds from '../../backgrounds/backgrounds';
+import icons from '../../../assets/icons/icons';
+import backgrounds from '../../../assets/backgrounds/backgrounds';
 
 export default function Home() {
     return (

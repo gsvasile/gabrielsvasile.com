@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ExperienceList from './ExperienceList';
-import backgrounds from '../../backgrounds/backgrounds';
+import backgrounds from '../../../assets/backgrounds/backgrounds';
 
 export default () =>
     <Section id='experience'>
