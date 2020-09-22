@@ -91,8 +91,8 @@ const GridContainer = styled.div.attrs({
     /* grid-template-columns: auto auto; */
     grid-gap: 0;
     grid-template-areas:
-        'projectLink skillGridItem'
-        'projectLink description';
+        'skillGridItem projectLink'
+        'description projectLink';
 
     /* fix: minimum width of 0 */
     grid-template-columns: minmax(0, 100%) minmax(0, 100%);
@@ -103,7 +103,6 @@ const GridContainer = styled.div.attrs({
 
 const ProjectShowCaseItem = styled.div.attrs({
     // className: 'flex items-center justify-center fl w-100 w-50-ns pt1 pb1 br ph2-ns'
-    className: 'ba'
 })`
     grid-area: projectLink;
     background-color: rgba(155, 155, 155, 0.8);
@@ -115,7 +114,6 @@ const ProjectShowCaseItem = styled.div.attrs({
 
 const SkillItem = styled.div.attrs({
     // className: 'bn flex-wrap flex-row'
-    className: 'ba'
 })`
     grid-area: skillGridItem;
     background-color: rgba(80, 150, 255, 0.8);
@@ -125,7 +123,6 @@ const SkillItem = styled.div.attrs({
 
 const DescriptionItem = styled.div.attrs({
     // className: 'bn flex-wrap flex-row'
-    className: 'ba'
 })`
     grid-area: description;
     background-color: rgba(20, 205, 150, 0.8);
