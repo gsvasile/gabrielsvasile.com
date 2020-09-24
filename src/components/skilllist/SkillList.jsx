@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export default ({ skillItems }) =>
     <React.Fragment>
-        {skillItems.map((skillItem, index) => (
+        {skillItems.map((skillItem) => (
             <SkillItem skillItem={skillItem} key={`skillItem-${skillItem}`}>
                 {skillItem}
             </SkillItem>
@@ -22,7 +22,7 @@ const SkillItem = styled.div.attrs({
     };
 `;
 
-const skillColors = {
+export const skillColors = {
     /* Languages */
     'C#': {
         color: 'rgb(116, 178, 253)',
@@ -73,7 +73,7 @@ const skillColors = {
     /* Libraries */
     React: {
         color: 'rgb(97, 218, 251)',
-        borderColor: 'rgba(247, 223, 30, 0.5)',
+        borderColor: 'rgba(97, 218, 251, 0.5)',
     },
 
     Tachyons: {
