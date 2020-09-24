@@ -127,7 +127,7 @@ const ProjectShowCaseItem = styled.div.attrs({
     className: 'flex justify-center items-center'
 })`
     grid-area: projectShowCase;
-    background-image: linear-gradient(rgba(0, 5, 5, 0.6), rgba(20, 20, 20, 0.5));
+    background-image: linear-gradient(rgba(10, 10, 10, 0.6), rgba(50, 50, 150, 0.4));
 `;
 
 const ShowCaseDisplay = styled.img.attrs({
@@ -146,7 +146,7 @@ const Buttons = styled.div.attrs({
     className: 'flex justify-between items-end'
 })`
     grid-area: projectLinks;
-    background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(50, 50, 150, 0.3));
+    background-image: linear-gradient(rgba(20, 20, 20, 0), rgba(50, 50, 150, 0.3));
 
     @media only screen and (max-width: 767px) {
         flex-direction: column;
