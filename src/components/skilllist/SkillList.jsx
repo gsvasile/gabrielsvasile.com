@@ -15,28 +15,33 @@ const SkillItem = styled.div.attrs({
 })`    
     color: ${props => skillColors[props.skillItem] && skillColors[props.skillItem].color};
     border-color: ${props => skillColors[props.skillItem] && skillColors[props.skillItem].borderColor};
+
+    @media only screen and (max-width: 767px) {        
+        margin-top: 2px;
+        margin-bottom: 2px;
+    };
 `;
 
 const skillColors = {
     /* Languages */
     'C#': {
         color: 'rgb(116, 178, 253)',
-        borderColor: 'rgba(183, 218, 255, 0.9)'
+        borderColor: 'rgb(183, 218, 255, 0.8)'
     },
 
     'C++': {
         color: 'rgb(200, 201, 201)',
-        borderColor: 'rgba(200, 201, 201, 0.4)'
+        borderColor: 'rgb(70, 255, 188, 0.4)'
     },
 
     LUA: {
-        color: 'rgba(171, 184, 236, 0.8)',
+        color: 'rgba(171, 184, 236, 1)',
         borderColor: 'rgba(171, 253, 116, 0.5)',
     },
 
     JavaScript: {
         color: 'rgb(247, 223, 30)',
-        borderColor: 'rgba(171, 253, 116, 0.5)',
+        borderColor: 'rgba(247, 223, 30, 0.8)',
     },
 
     Docker: {
@@ -59,12 +64,13 @@ const skillColors = {
         borderColor: 'rgba(171, 253, 116, 0.5)',
     },
 
-    /* Libraries */
+    /* Language Versions */
     ES6: {
-        color: 'rgb(247, 223, 30)',
-        borderColor: 'rgba(247, 223, 30, 0.5)',
+        color: 'rgb(201, 189, 24)',
+        borderColor: 'rgba(247, 233, 130, 0.5)',
     },
 
+    /* Libraries */
     React: {
         color: 'rgb(97, 218, 251)',
         borderColor: 'rgba(247, 223, 30, 0.5)',
@@ -75,6 +81,11 @@ const skillColors = {
         borderColor: 'rgba(247, 223, 30, 0.5)',
     },
 
+    'Styled-Components': {
+        color: 'rgb(174, 25, 47)',
+        borderColor: 'rgba(247, 223, 30, 0.5)',
+    },
+
     Redux: {
         color: 'rgb(188, 144, 255)',
         borderColor: 'rgba(188, 144, 255, 0.5)',
@@ -82,6 +93,11 @@ const skillColors = {
 
     Nodejs: {
         color: 'rgb(102, 210, 100)',
+        borderColor: 'rgba(102, 210, 100, 0.5)',
+    },
+
+    CSS: {
+        color: 'rgb(204, 181, 157)',
         borderColor: 'rgba(102, 210, 100, 0.5)',
     },
 

@@ -1,18 +1,18 @@
 import React from 'react';
 import Project from './Project';
+import images from '../../../assets/projectimages/projectImages';
 
 export default () =>
     <React.Fragment>
-        {projectList.map(({ id, title, subTitle, company, link, dates, skills, ...experience }) => (
+        {projectList.map(({ id, name, links, skills, description, imageWidth }) => (
             <Project
                 key={id}
-                title={title}
-                subTitle={subTitle}
-                company={company}
-                link={link}
-                dates={dates}
+                name={name}
                 skills={skills}
-                experience={experience}
+                description={description}
+                image={images[name]}
+                imageWidth={imageWidth}
+                links={links}
             />
         ))}
     </React.Fragment>
@@ -20,32 +20,24 @@ export default () =>
 // This contains the job experiences, etc. starting with the most recent.
 const projectList = [
     {
-        id: 2,
-        title: 'Software Engineer',
-        subTitle: 'Game Development',
-        company: 'IGT',
-        link: 'https://igt.com/',
-        dates: 'April 2011 - June 2020',
-        skills: ['C#', 'Unity3D', 'C++', 'LUA'],
-        bullet1: '• Developed casino games with C# and Unity3D, and C++ with LUA.',
+        id: 1,
+        name: 'gabrielsvasile.com',
+        skills: ['JavaScript', 'ES6', 'React', 'Tachyons', 'Styled-Components', 'CSS'],
+        description: 'This is a portfolio & resume website.',
+        imageWidth: '490',
+        links: [
+            { type: 'githubbutton', text: 'Source Code', link: 'https://github.com/gsvasile/gabrielsvasile.com' },
+            { type: 'live', text: 'Visit Live', link: 'http://gabrielsvasile.com' }
+        ]
     },
     {
-        id: 1,
-        title: 'Software Engineer',
-        subTitle: 'Produce Assurance',
+        id: 0,
+        name: 'Software Engineer',
+        subname: 'Produce Assurance',
         company: 'IGT',
         link: 'https://igt.com/',
         skills: ['C#', 'VBA'],
         dates: 'April 2006 - April 2011',
         bullet1: '• Developed and maintained test tools using C# and VBA that improved testers\' performance.',
-    },
-    {
-        id: 0,
-        title: 'Software Engineer',
-        company: 'Vital Systems',
-        link: 'https://vitalsystems.com/',
-        dates: 'March 2005 - March 2006',
-        skills: ['PHP', 'SQLServer', 'MSAccess'],
-        bullet1: '• Developed and maintained the in-house ERP software system using VBA, MS Access, and SQL Server.',
     }
 ];

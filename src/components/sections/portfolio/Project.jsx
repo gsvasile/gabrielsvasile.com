@@ -1,142 +1,166 @@
 import React from 'react';
 import SkillList from '../../skilllist/SkillList';
 import styled from 'styled-components';
+import Tilt from 'react-tilt';
+import icons from '../../../assets/icons/icons';
+
+const GetButtonsJSX = (links) => {
+    if (links) {
+        return (
+            links.map(({ type, text, link }) => {
+                if (icons[type]) {
+                    return (
+                        <Link href={link}>
+                            <Button>
+                                <img alt={type} src={icons[type]} />
+                                {text}
+                            </Button>
+                        </Link>
+                    );
+                } else {
+                    return (
+                        <Link href={link}>
+                            <Button>
+                                {text}
+                            </Button>
+                        </Link>
+                    );
+                }
+            })
+        );
+    } else {
+        return <span />;
+    }
+}
 
 export default (
     {
-        title,
-        subTitle,
-        company,
-        link,
-        dates,
+        name,
         skills,
-        experience
+        description,
+        image,
+        imageWidth,
+        links
     }
 ) => {
 
-    // Only include a subtitle if it exists.
-    const subTitlePart = (subTitle) ? <span className='wide-only'> - {subTitle}</span> : <span />;
-
-    // It is assumed the experience will come through as an object with just
-    // experience description. They keys are not needed, just the values.
-    // So get an array with just the values to list the descriptions in the card later.
-    const experienceToList = Object.values(experience);
+    let buttons = GetButtonsJSX(links);
 
     return (
         <Project>
-            <Title>
-                <ProjectName>
-                    {title} {subTitlePart}
-                    <BufferWord>
-                        {' at'}
-                    </BufferWord>
-                    <CompanyLink href={link}>
-                        {company}
-                    </CompanyLink>
-                </ProjectName>
-                <div>{dates}</div>
-            </Title>
-            <GridContainer>
-                {/* <ProjectDetails> */}
-                <ProjectShowCaseItem>
-                    {experienceToList.map((point, index) => (
-                        <DescriptionLine key={index}>
-                            {point}
-                        </DescriptionLine>
-                    ))}
-                </ProjectShowCaseItem>
-                <SkillItem>
+            <ProjectGridContainer>
+                <Name>{name}</Name>
+                <SkillItems>
                     <SkillList skillItems={skills} />
-                </SkillItem>
+                </SkillItems>
                 <DescriptionItem>
-                    {'how ya doin'}
+                    {description}
                 </DescriptionItem>
-                {/* </ProjectDetails> */}
-            </GridContainer>
+                <Buttons>
+                    {buttons}
+                </Buttons>
+                <ProjectShowCaseItem>
+                    <Tilt
+                        options={{
+                            max: 10,
+                            perspective: 950,
+                            scale: 1,
+                            transition: true
+                        }}
+                    >
+                        <div className='Tilt-inner'>
+                            <ShowCaseDisplay
+                                alt={name} src={image} width={imageWidth}
+                            />
+                        </div>
+                    </Tilt>
+                </ProjectShowCaseItem>
+            </ProjectGridContainer>
         </Project>
     );
 }
 
 const Project = styled.article.attrs({
-    className: 'bg-black-60 ba white mb3'
+    className: 'bg-black-20 ba white mb3'
 })``;
 
-const Title = styled.header.attrs({
-    className: 'flex justify-between items-center fw7 pb1 bb b--white-70'
+const ProjectGridContainer = styled.div`
+    display: grid;
+    grid-gap: 0px 0px;
+    grid-template-areas:
+        'projectName    projectName'
+        'skillItems     skillItems'
+        'description    projectShowCase'
+        'projectLinks   projectShowCase';
+    /* Expand the columns to a predifined widths */
+    grid-template-columns: minmax(0, 43%) minmax(43%, 100%);
+`;
+
+const Name = styled.header.attrs({
+    className: 'f3 flex items-start pl1'
 })`
+    grid-area: projectName;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 5, 5, 0.7));
+`;
+
+const SkillItems = styled.div.attrs({
+    className: 'f5 pl0 o-100'
+})`
+    grid-area: skillItems;
+    background-image: linear-gradient(rgba(0, 5, 5, 0.7), rgba(5, 5, 5, 0.6));
+`;
+
+const DescriptionItem = styled.div.attrs({
+    className: 'flex justify-start items-center pl1 tl'
+})`
+    grid-area: description;
+    grid-row: 3 / span 2;
+    background-image: linear-gradient(rgba(0, 5, 5, 0.6), rgba(20, 20, 20, 0.5));
+
     @media only screen and (max-width: 767px) {
-        flex-direction: column;
-        padding-bottom: 10px;
+        align-items: start;
+        font-size: 14px;
     }
 `;
 
-const ProjectName = styled.div.attrs({
-    className: 'f3'
-})``;
+const ProjectShowCaseItem = styled.div.attrs({
+    className: 'flex justify-center items-center'
+})`
+    grid-area: projectShowCase;
+    background-image: linear-gradient(rgba(0, 5, 5, 0.6), rgba(20, 20, 20, 0.5));
+`;
 
-const BufferWord = styled.span.attrs({
-    className: 'o-50'
-})``;
+const ShowCaseDisplay = styled.img.attrs({
+    className: 'ba'
+})`
+    box-shadow: 0 5px 15px rgb(155, 155, 155);
+`;
 
-const CompanyLink = styled.a.attrs({
-    className: 'link pl1 blue',
+const Link = styled.a.attrs({
+    className: 'link',
     target: '_blank',
     rel: 'noopener noreferrer'
 })``;
 
-const GridContainer = styled.div.attrs({
-    // className: 'center'
+const Buttons = styled.div.attrs({
+    className: 'flex justify-between items-end'
 })`
-    display: grid;
-    /* grid-template-columns: auto auto; */
-    grid-gap: 0;
-    grid-template-areas:
-        'skillGridItem projectLink'
-        'description projectLink';
-
-    /* fix: minimum width of 0 */
-    grid-template-columns: minmax(0, 100%) minmax(0, 100%);
-    ${'' /* grid-template-rows: minmax(0, 100%) minmax(0, 100%); */}
-    ${'' /* background-color: #2196F3; */}
-    ${'' /* padding: 10px; */}
-`;
-
-const ProjectShowCaseItem = styled.div.attrs({
-    // className: 'flex items-center justify-center fl w-100 w-50-ns pt1 pb1 br ph2-ns'
-})`
-    grid-area: projectLink;
-    background-color: rgba(155, 155, 155, 0.8);
-    ${'' /* text-align: center;     */}
-    ${'' /* padding: 20px 0; */}
-    ${'' /* font-size: 30px; */}
-    ${'' /* height: 10rem; */}
-  `;
-
-const SkillItem = styled.div.attrs({
-    // className: 'bn flex-wrap flex-row'
-})`
-    grid-area: skillGridItem;
-    background-color: rgba(80, 150, 255, 0.8);
-    ${'' /* text-align: center; */}
-    ${'' /* padding: 20px 0; */}
-`;
-
-const DescriptionItem = styled.div.attrs({
-    // className: 'bn flex-wrap flex-row'
-})`
-    grid-area: description;
-    background-color: rgba(20, 205, 150, 0.8);
-    ${'' /* text-align: center; */}
-    ${'' /* padding: 20px 0; */}
-`;
-
-const DescriptionLine = styled.div.attrs({
-    className: 'f5'
-})`
-    color: rgb(201, 183, 166);
+    grid-area: projectLinks;
+    background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(50, 50, 150, 0.3));
 
     @media only screen and (max-width: 767px) {
-        font-size: 15px;
-  }
-}
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+`;
+
+const Button = styled.button.attrs({
+    className: 'flex justify-between items-center bg-black br4 white h2'
+})`
+    cursor: pointer;
+
+    @media only screen and (max-width: 767px) {
+        margin-top: 5px;
+    }
 `;

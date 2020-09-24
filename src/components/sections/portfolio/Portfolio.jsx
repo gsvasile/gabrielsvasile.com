@@ -6,7 +6,7 @@ import ProjectList from './ProjectList';
 export default () =>
     <Section id='portfolio'>
         <Header>
-            <SectionName>Portfolio</SectionName>
+            <SectionName>{'Personal Projects'}</SectionName>
         </Header>
         <ProjectList />
     </Section>
