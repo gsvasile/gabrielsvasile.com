@@ -156,7 +156,7 @@ const Buttons = styled.div.attrs({
 `;
 
 const Button = styled.button.attrs({
-    className: 'flex justify-between items-center bg-black br4 white h2'
+    className: 'flex justify-between items-center bg-black br4 white h-25'
 })`
     cursor: pointer;
 
