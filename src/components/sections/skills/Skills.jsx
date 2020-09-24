@@ -14,7 +14,7 @@ export default () =>
 const Section = styled.section.attrs({
     className: 'bg-center cover pl5-ns pr5-ns pb5'
 })`
-    background-image:   linear-gradient(rgba(0,0,0,1), rgba(0, 0, 0, .5)),
+    background-image:   linear-gradient(rgba(0,0,0,0.2), rgba(0, 0, 0, 0)),
                         url(${backgrounds.skills_large});
     background-attachment: fixed;
     
