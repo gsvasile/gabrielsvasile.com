@@ -1,7 +1,7 @@
 import React from 'react';
-import SkillList from '../../skilllist/SkillList';
 import styled from 'styled-components';
 import Tilt from 'react-tilt';
+import SkillList from '../../skilllist/SkillList';
 import icons from '../../../assets/icons/icons';
 
 const GetButtonsJSX = (links) => {

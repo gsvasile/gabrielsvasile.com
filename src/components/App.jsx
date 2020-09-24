@@ -3,6 +3,7 @@ import Menu from './menu/Menu';
 import Home from './sections/home/Home';
 import Experience from './sections/experience/Experience';
 import Portfolio from './sections/portfolio/Portfolio';
+import Skills from './sections/skills/Skills';
 import './App.css';
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
         <main>
           <Experience />
           <Portfolio />
+          <Skills />
         </main>
       </div>
     </React.Fragment>
