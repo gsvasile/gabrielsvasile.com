@@ -4,6 +4,7 @@ import Home from './sections/home/Home';
 import Experience from './sections/experience/Experience';
 import Portfolio from './sections/portfolio/Portfolio';
 import Skills from './sections/skills/Skills';
+import Education from './sections/education/Education';
 import './App.css';
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
           <Experience />
           <Portfolio />
           <Skills />
+          <Education />
         </main>
       </div>
     </React.Fragment>
