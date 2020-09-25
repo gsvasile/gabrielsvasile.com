@@ -39,12 +39,11 @@ const GridContainer = styled.div.attrs({
     display: grid;
     grid-template-columns: 170px auto;
     background-image: linear-gradient(to right, rgba(75, 85, 95, 0.8), rgba(0, 0, 0, 0.5));
-    padding: 10px;
     overflow: hidden;
 `;
 
 const GridHeaderLeft = styled.div.attrs({
-    className: 'flex justify-start bb'
+    className: 'flex justify-start bb pl1'
 })`
     grid-area: 1 / 1 / 1 / 2;
     width: 100%;
@@ -52,7 +51,7 @@ const GridHeaderLeft = styled.div.attrs({
 `;
 
 const GridHeaderRight = styled.div.attrs({
-    className: 'flex justify-between bb bl pl1'
+    className: 'flex justify-between bb bl pr1'
 })`
     grid-area: 1 / 2 / 1 / 3;
     width: 100%;

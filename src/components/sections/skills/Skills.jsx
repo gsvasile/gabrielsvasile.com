@@ -12,7 +12,7 @@ export default () =>
     </Section>
 
 const Section = styled.section.attrs({
-    className: 'bg-center cover pl5-ns pr5-ns pb5'
+    className: 'bg-center cover pl6-ns pr6-ns pb5'
 })`
     background-image:   linear-gradient(rgba(0,0,0,0.2), rgba(0, 0, 0, 0)),
                         url(${backgrounds.skills_large});
@@ -21,6 +21,9 @@ const Section = styled.section.attrs({
     @media only screen and (max-width: 767px) {        
         background-image:   linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
                             url(${backgrounds.home_small});
+        padding-left: 2rem;
+        padding-right: 2rem;
+
     };
 `;
 
