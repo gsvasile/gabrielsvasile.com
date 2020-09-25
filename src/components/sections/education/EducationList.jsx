@@ -11,7 +11,6 @@ const educationList = [
         degree: undefined,
         classes: 'Advanced C# and Database Design Classes Taken',
         link: undefined,
-        // backgroundColor: 'linear-gradient(to top, rgba(153, 204, 0), rgba(255, 255, 255, 0.5) 70%)',
     },
     {
         id: 0,
