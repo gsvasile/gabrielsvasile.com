@@ -9,7 +9,7 @@ const educationList = [
         graduationYear: undefined,
         lastYearAttended: '2008',
         degree: undefined,
-        classes: 'Advanced C# and Database Design Classes Taken',
+        classes: 'Advanced C# & Database Design Classes',
         link: undefined,
     },
     {
@@ -25,36 +25,33 @@ const educationList = [
     },
 ];
 
-export default () => {
-    return (
-        <React.Fragment>
-            {educationList.map(({ id, school, graduationYear, lastYearAttended, degree, classes, link, backgroundColor, textColor }) => (
-                <Card
-                    key={id}
-                    backgroundColor={backgroundColor ? backgroundColor : 'rgb(0, 0, 0, 0.5)'}
-                >
-                    <Degree>
-                        {degree
-                            ? degree
-                            : classes
-                        }
-                    </Degree>
-                    <School textColor={textColor}>
-                        <div>
-                            {school}
-                        </div>
-                        <div>
-                            {graduationYear
-                                ? graduationYear
-                                : lastYearAttended}
-                        </div>
-                    </School>
+export default () =>
+    <React.Fragment>
+        {educationList.map(({ id, school, graduationYear, lastYearAttended, degree, classes, link, backgroundColor, textColor }) => (
+            <Card
+                key={id}
+                backgroundColor={backgroundColor ? backgroundColor : 'rgb(0, 0, 0, 0.5)'}
+            >
+                <Degree>
+                    {degree
+                        ? degree
+                        : classes
+                    }
+                </Degree>
+                <School textColor={textColor}>
+                    <div>
+                        {school}
+                    </div>
+                    <div>
+                        {graduationYear
+                            ? graduationYear
+                            : lastYearAttended}
+                    </div>
+                </School>
 
-                </Card>
-            ))}
-        </React.Fragment>
-    );
-}
+            </Card>
+        ))}
+    </React.Fragment>
 
 const Card = styled.div.attrs({
     className: 'ba br3 white bg-black-80 mb2'
