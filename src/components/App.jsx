@@ -6,6 +6,7 @@ import Portfolio from './sections/portfolio/Portfolio';
 import Skills from './sections/skills/Skills';
 import Education from './sections/education/Education';
 import About from './sections/aboutme/AboutMe';
+import Footer from './footer/Footer'
 import './App.css';
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
           <Education />
           <About />
         </main>
+        <Footer />
       </div>
     </React.Fragment>
   );

@@ -17,7 +17,7 @@ export default function Home() {
                             src={icons.linkedinlogo}
                         />
                         <SmImg
-                            alt='LinkedIn® Bug'
+                            alt='LinkedIn® bug'
                             src={icons.linkedinbug}
                         />
                     </Link>
@@ -29,7 +29,7 @@ export default function Home() {
                             src={icons.githublogo}
                         />
                         <SmImg
-                            alt='GitHub Bug'
+                            alt='GitHub mark'
                             src={icons.githubbug}
                         />
                     </Link>
