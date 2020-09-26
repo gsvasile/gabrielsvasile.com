@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import SkillList, { skillColors } from '../../skilllist/SkillList';
-import FadeInSection from '../../effects/FadeInSection'
+import FadeInSection from '../../effects/FadeInSection';
 
 // This contains the skills mapped to a confidence level.
 const skillsConfidenceMap = {
@@ -16,7 +16,7 @@ const skillsConfidenceMap = {
 };
 
 export default () =>
-    <FadeInSection>
+    <FadeInSection fadeClass='fade-in-section'>
         <GridContainer>
             <GridHeaderLeft>
                 <GridHeaderElement>{'Skills'}</GridHeaderElement>

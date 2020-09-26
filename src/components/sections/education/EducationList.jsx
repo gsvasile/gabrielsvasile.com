@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import FadeInSection from '../../effects/FadeInSection';
 
 // This contains information for official education.
 const educationList = [
@@ -28,28 +29,29 @@ const educationList = [
 export default () =>
     <React.Fragment>
         {educationList.map(({ id, school, graduationYear, lastYearAttended, degree, classes, link, backgroundColor, textColor }) => (
-            <Card
-                key={id}
-                backgroundColor={backgroundColor ? backgroundColor : 'rgb(0, 0, 0, 0.5)'}
-            >
-                <Degree>
-                    {degree
-                        ? degree
-                        : classes
-                    }
-                </Degree>
-                <School textColor={textColor}>
-                    <div>
-                        {school}
-                    </div>
-                    <div>
-                        {graduationYear
-                            ? graduationYear
-                            : lastYearAttended}
-                    </div>
-                </School>
-
-            </Card>
+            <FadeInSection fadeClass='fade-in-section'>
+                <Card
+                    key={id}
+                    backgroundColor={backgroundColor ? backgroundColor : 'rgb(0, 0, 0, 0.5)'}
+                >
+                    <Degree>
+                        {degree
+                            ? degree
+                            : classes
+                        }
+                    </Degree>
+                    <School textColor={textColor}>
+                        <div>
+                            {school}
+                        </div>
+                        <div>
+                            {graduationYear
+                                ? graduationYear
+                                : lastYearAttended}
+                        </div>
+                    </School>
+                </Card>
+            </FadeInSection>
         ))}
     </React.Fragment>
 

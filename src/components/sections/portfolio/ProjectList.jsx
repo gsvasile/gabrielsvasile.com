@@ -1,19 +1,22 @@
 import React from 'react';
-import Project from './Project';
 import images from '../../../assets/projectimages/projectImages';
+import FadeInSection from '../../effects/FadeInSection';
+import Project from './Project';
 
 export default () =>
     <React.Fragment>
         {projectList.map(({ id, name, links, skills, description, imageWidth }) => (
-            <Project
-                key={id}
-                name={name}
-                skills={skills}
-                description={description}
-                image={images[name]}
-                imageWidth={imageWidth}
-                links={links}
-            />
+            <FadeInSection fadeClass='fade-in-section'>
+                <Project
+                    key={id}
+                    name={name}
+                    skills={skills}
+                    description={description}
+                    image={images[name]}
+                    imageWidth={imageWidth}
+                    links={links}
+                />
+            </FadeInSection>
         ))}
     </React.Fragment>
 

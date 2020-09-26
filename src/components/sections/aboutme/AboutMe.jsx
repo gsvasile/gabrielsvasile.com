@@ -1,12 +1,15 @@
 import React from 'react'
 import styled from 'styled-components';
 import backgrounds from '../../../assets/backgrounds/backgrounds';
+import FadeInSection from '../../effects/FadeInSection';
 
 export default () =>
     <Section id='about'>
-        <Header>
-            <SectionName>{'About Me'}</SectionName>
-        </Header>
+        <FadeInSection fadeClass='fade-in-from-right'>
+            <Header>
+                <SectionName>{'About Me'}</SectionName>
+            </Header>
+        </FadeInSection>
         <AboutContainer>
             <Idea>
                 I am passionate about technology and really enjoy working with other talented
@@ -35,9 +38,13 @@ const Section = styled.section.attrs({
     };
 `;
 
-const Header = styled.header.attrs({
-    className: 'ba bg-black-80'
-})``;
+const Header = styled.header`
+    border: 1px solid white;
+    @media only screen and (max-width: 767px) {
+        border: none;
+        background-color: transparent;
+    };
+`;
 
 const SectionName = styled.h1.attrs({
     className: 'f1 center'
