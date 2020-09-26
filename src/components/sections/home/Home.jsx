@@ -43,7 +43,7 @@ const Section = styled.section.attrs({
     className: 'bg-center cover flex flex-column vh-100 white justify-center'
 })`
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
-                      url(${backgrounds.home_large});
+                      url(${backgrounds.about_medium});
     background-attachment: fixed;
 
     @media only screen and (max-width: 767px) {        
