@@ -81,7 +81,7 @@ export default (
 }
 
 const Project = styled.article.attrs({
-    className: 'bg-black-20 ba white mb3'
+    className: 'bg-black-20 ba br3 white mb3'
 })``;
 
 const ProjectGridContainer = styled.div`
@@ -94,6 +94,7 @@ const ProjectGridContainer = styled.div`
         'projectLinks   projectShowCase';
     /* Expand the columns to a predifined widths */
     grid-template-columns: minmax(0, 43%) minmax(43%, 100%);
+    padding: 2px;
 `;
 
 const Name = styled.header.attrs({

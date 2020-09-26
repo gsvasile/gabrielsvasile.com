@@ -22,7 +22,7 @@ export default () =>
     </Section>
 
 const Section = styled.section.attrs({
-    className: 'cover pl5-ns pr5-ns pa7 flex items-center'
+    className: 'bg-center cover pl5-ns pr5-ns pa6 flex items-center'
 })`
     background-image:   linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 30%),
                         url(${backgrounds.about_large});

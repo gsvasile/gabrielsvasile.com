@@ -51,7 +51,7 @@ export default (
 }
 
 const Card = styled.article.attrs({
-    className: 'bg-black-80 ba white pa1 mb3'
+    className: 'bg-black-80 ba br3 white pa1 mb3'
 })``;
 
 const Header = styled.header.attrs({
