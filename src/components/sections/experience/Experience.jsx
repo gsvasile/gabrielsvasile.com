@@ -12,15 +12,19 @@ export default () =>
     </Section>;
 
 const Section = styled.section.attrs({
-    className: 'bg-center cover pl5-ns pr5-ns pb5'
+    className: 'bg-center cover pb5'
 })`
     background-image:   linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
                         url(${backgrounds.experience_large});
     background-attachment: fixed;
+    padding-left: 8rem;
+    padding-right: 8rem;
 
     @media only screen and (max-width: 767px) {        
         background-image:   linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
                             url(${backgrounds.home_small});
+        padding-left: 1rem;
+        padding-right: 1rem;
     };
 `;
 
