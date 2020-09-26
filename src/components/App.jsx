@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import Menu from './menu/Menu';
 import Home from './sections/home/Home';
 import Experience from './sections/experience/Experience';
@@ -8,22 +9,19 @@ import Education from './sections/education/Education';
 import About from './sections/aboutme/AboutMe';
 import './App.css';
 
-const App = () => {
-  return (
-    <React.Fragment>
-      <div className='App'>
-        <Menu />
-        <Home />
-        <main>
-          <Experience />
-          <Portfolio />
-          <Skills />
-          <Education />
-          <About />
-        </main>
-      </div>
-    </React.Fragment>
-  );
-}
+export default () =>
+  <AppContainer>
+    <Menu />
+    <Home />
+    <main>
+      <Experience />
+      <Portfolio />
+      <Skills />
+      <Education />
+      <About />
+    </main>
+  </AppContainer>;
 
-export default App;
+const AppContainer = styled.div.attrs({
+  className: 'App'
+})``;
