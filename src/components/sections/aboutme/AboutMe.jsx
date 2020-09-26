@@ -39,7 +39,10 @@ const Section = styled.section.attrs({
 `;
 
 const Header = styled.header`
+
     border: 1px solid white;
+    background: #000;
+
     @media only screen and (max-width: 767px) {
         border: none;
         background-color: transparent;
