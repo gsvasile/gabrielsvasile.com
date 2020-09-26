@@ -27,7 +27,7 @@ export default () =>
             <SkillList skillItems={Object.keys(skillsConfidenceMap)} />
         </SkillItems>
         {Object.keys(skillsConfidenceMap).map((skill) => (
-            <GraphLineContainer>
+            <GraphLineContainer key={skill}>
                 <GraphLine color={skillColors[skill].color} fillPercentage={skillsConfidenceMap[skill]} />
             </GraphLineContainer>
         ))}

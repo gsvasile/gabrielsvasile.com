@@ -7,10 +7,10 @@ import icons from '../../../assets/icons/icons';
 const GetButtonsJSX = (links) => {
     if (links) {
         return (
-            links.map(({ type, text, link }) => {
+            links.map(({ type, text, link }, index) => {
                 if (icons[type]) {
                     return (
-                        <Link href={link}>
+                        <Link key={type + '-' + index} href={link}>
                             <Button>
                                 <img alt={type} src={icons[type]} />
                                 {text}
@@ -19,7 +19,7 @@ const GetButtonsJSX = (links) => {
                     );
                 } else {
                     return (
-                        <Link href={link}>
+                        <Link key={type + '-' + index} href={link}>
                             <Button>
                                 {text}
                             </Button>
@@ -70,7 +70,9 @@ export default (
                     >
                         <div className='Tilt-inner'>
                             <ShowCaseDisplay
-                                alt={name} src={image} width={imageWidth}
+                                alt={name}
+                                src={image}
+                                width={imageWidth}
                             />
                         </div>
                     </Tilt>
