@@ -17,7 +17,7 @@ const Section = styled.section.attrs({
 })`
     background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, 0)),
                 url(${ucscLogo}) no-repeat bottom left, 
-                url(${backgrounds.education_large}) no-repeat  fixed;
+                url(${backgrounds.education_medium}) no-repeat  fixed;
     background-size: 1rem, 200px, cover;
     padding-left: 10rem;
     padding-right: 10rem;

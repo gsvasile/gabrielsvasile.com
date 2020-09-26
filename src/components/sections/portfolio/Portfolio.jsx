@@ -17,7 +17,7 @@ const Section = styled.section.attrs({
     className: 'bg-center cover pb5'
 })`
     background-image:   linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
-                        url(${backgrounds.portfolio_large});
+                        url(${backgrounds.portfolio_medium});
     background-attachment: fixed;
     padding-left: 8rem;
     padding-right: 8rem;
