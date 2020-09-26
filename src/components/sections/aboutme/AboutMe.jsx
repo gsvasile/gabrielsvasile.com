@@ -38,10 +38,11 @@ const Section = styled.section.attrs({
     };
 `;
 
-const Header = styled.header`
-
+const Header = styled.header.attrs({
+    className: 'br2'
+})`
     border: 1px solid white;
-    background: #000;
+    background: rgba(0,0,0,0.7);
 
     @media only screen and (max-width: 767px) {
         border: none;
