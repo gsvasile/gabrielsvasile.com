@@ -25,16 +25,15 @@ export default () => {
 }
 
 const Footer = styled.footer.attrs({
-    className: 'f3 white fixed w-100'
+    className: 'f3 white w-100 flex items-center justify-center '
 })`
     bottom: 0;
-    height: 2rem;
-    background: rgba(15, 15, 15, 1);
-    box-shadow: 0 0 10px 10px rgba(15, 15, 15, 0.8);
+    background: rgba(5, 5, 5, 1);
+    box-shadow: 0 0 10px 10px rgba(15, 15, 15, 1);
 `;
 
 const Link = styled.a.attrs({
-    className: 'link',
+    className: 'link pl3',
     target: '_blank',
     rel: 'noopener noreferrer'
 })``;
@@ -44,5 +43,5 @@ const Img = styled.img.attrs({})`
 `;
 
 const Span = styled.span.attrs({
-    className: 'f6'
+    className: 'f6 pl3 o-30'
 })``;

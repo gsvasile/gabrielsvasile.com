@@ -24,8 +24,7 @@ export default () =>
 const Section = styled.section.attrs({
     className: 'bg-center cover pl5-ns pr5-ns pa6 flex items-center justify-center'
 })`
-    background-image:   linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 30%),
-                        url(${backgrounds.about_large});
+    background-image:   url(${backgrounds.about_large});
     background-attachment: fixed;
     
     @media only screen and (max-width: 767px) {        
