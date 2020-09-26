@@ -8,29 +8,8 @@ import Skills from './sections/skills/Skills';
 import Education from './sections/education/Education';
 import About from './sections/aboutme/AboutMe';
 import Footer from './footer/Footer'
+import FadeInSection from './effects/FadeInSection'
 import './App.css';
-
-const FadeInSection = (props) => {
-  const [isVisible, setVisible] = React.useState(true);
-  const domRef = React.useRef();
-  const fadeClass = props.fadeClass ?? 'fade-in-section';
-  React.useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setVisible(entry.isIntersecting));
-    });
-    const current = domRef.current;
-    observer.observe(current);
-    return () => observer.unobserve(current);
-  }, []);
-  return (
-    <div
-      className={`${fadeClass} ${isVisible ? 'is-visible' : ''}`}
-      ref={domRef}
-    >
-      {props.children}
-    </div>
-  );
-}
 
 const App = () => {
   return (
@@ -42,11 +21,9 @@ const App = () => {
         <Portfolio />
         <Skills />
         <Education />
-        <FadeInSection>
-          <About />
-        </FadeInSection>
+        <About />
       </main>
-      <FadeInSection fadeClass='fade-in-section-no-move'>
+      <FadeInSection shouldMove={false}>
         <Footer />
       </FadeInSection>
     </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import SkillList, { skillColors } from '../../skilllist/SkillList';
+import FadeInSection from '../../effects/FadeInSection'
 
 // This contains the skills mapped to a confidence level.
 const skillsConfidenceMap = {
@@ -15,23 +16,25 @@ const skillsConfidenceMap = {
 };
 
 export default () =>
-    <GridContainer>
-        <GridHeaderLeft>
-            <GridHeaderElement>{'Skills'}</GridHeaderElement>
-        </GridHeaderLeft>
-        <GridHeaderRight>
-            <GridHeaderElement>{'Novice'}</GridHeaderElement>
-            <GridHeaderElement>{'Expert'}</GridHeaderElement>
-        </GridHeaderRight>
-        <SkillItems numRowLines={Object.keys(skillsConfidenceMap).length + 2}>
-            <SkillList skillItems={Object.keys(skillsConfidenceMap)} />
-        </SkillItems>
-        {Object.keys(skillsConfidenceMap).map((skill) => (
-            <GraphLineContainer key={skill}>
-                <GraphLine color={skillColors[skill].color} fillPercentage={skillsConfidenceMap[skill]} />
-            </GraphLineContainer>
-        ))}
-    </GridContainer>
+    <FadeInSection>
+        <GridContainer>
+            <GridHeaderLeft>
+                <GridHeaderElement>{'Skills'}</GridHeaderElement>
+            </GridHeaderLeft>
+            <GridHeaderRight>
+                <GridHeaderElement>{'Novice'}</GridHeaderElement>
+                <GridHeaderElement>{'Expert'}</GridHeaderElement>
+            </GridHeaderRight>
+            <SkillItems numRowLines={Object.keys(skillsConfidenceMap).length + 2}>
+                <SkillList skillItems={Object.keys(skillsConfidenceMap)} />
+            </SkillItems>
+            {Object.keys(skillsConfidenceMap).map((skill) => (
+                <GraphLineContainer key={skill}>
+                    <GraphLine color={skillColors[skill].color} fillPercentage={skillsConfidenceMap[skill]} />
+                </GraphLineContainer>
+            ))}
+        </GridContainer>
+    </FadeInSection>
 
 const GridContainer = styled.div.attrs({
     className: 'ba br3 white bg-black-10'

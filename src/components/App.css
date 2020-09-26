@@ -58,3 +58,14 @@
     display: inline-block;
   }
 }
+
+/* Following guidance from https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/
+   with regard to animations */
+@media screen and (prefers-reduced-motion: reduce), (update: slow) {
+  /* Remove duration for all unknown animation when a user requests a reduced animation experience */
+  * {
+    animation-duration: var(--animation-duration);
+    animation-iteration-count: 1 !important;
+    transition-duration: var(--animation-duration);
+  }
+}

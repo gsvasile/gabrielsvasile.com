@@ -22,7 +22,7 @@ export default () =>
     </Section>
 
 const Section = styled.section.attrs({
-    className: 'bg-center cover pl5-ns pr5-ns pa6 flex items-center'
+    className: 'bg-center cover pl5-ns pr5-ns pa6 flex items-center justify-center'
 })`
     background-image:   linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 30%),
                         url(${backgrounds.about_large});
@@ -30,7 +30,9 @@ const Section = styled.section.attrs({
     
     @media only screen and (max-width: 767px) {        
         background-image:  url(${backgrounds.home_small});
-        flex-flow: column wrap;
+        flex-flow: column nowrap;
+        padding-left: 1rem;
+        padding-right: 1rem;
     };
 `;
 
@@ -45,13 +47,14 @@ const SectionName = styled.h1.attrs({
 `;
 
 const AboutContainer = styled.div.attrs({
-    className: 'ba br3 white ml6 mr5 tc pl2 pr1 tracked'
+    className: 'ba br3 white ml5-ns mr5-ns tc pl2 pr1 tracked'
 })`    
     background: linear-gradient(to left, rgba(75, 85, 85, 1), rgba(10, 10, 10, 0.9) 20%);
     
     @media only screen and (max-width: 767px) {
         margin-left: 1rem;
         margin-right: 1rem;
+        width: 25rem;
     };
 `
 const Idea = styled.p.attrs({
