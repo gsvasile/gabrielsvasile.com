@@ -17,7 +17,7 @@ export default () =>
             </Idea>
             <Idea>
                 Learning quickly, I am thrilled to be part of a field that can move fast
-                and where I can constistely hone my skills and knowledge. Whether that is in a
+                and where I can consistently hone my skills and knowledge. Whether that is in a
                 particular programming language, or a new library, or getting more familiar with
                 a design pattern and how I can use it to improve products.
             </Idea>
