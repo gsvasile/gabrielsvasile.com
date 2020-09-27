@@ -36,7 +36,7 @@ const experienceList = [
     {
         id: 1,
         title: 'Software Engineer',
-        subTitle: 'Produce Assurance',
+        subTitle: 'Product Assurance',
         company: 'IGT',
         link: 'https://igt.com/',
         skills: ['C#', 'VBA'],
