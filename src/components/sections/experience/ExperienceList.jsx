@@ -5,9 +5,8 @@ import ExperienceCard from './ExperienceCard';
 export default () =>
     <React.Fragment>
         {experienceList.map(({ id, title, subTitle, company, link, dates, skills, ...experience }) => (
-            <FadeInSection fadeClass='fade-in-section'>
+            <FadeInSection key={id} fadeClass='fade-in-section'>
                 <ExperienceCard
-                    key={id}
                     title={title}
                     subTitle={subTitle}
                     company={company}

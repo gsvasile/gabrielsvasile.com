@@ -6,9 +6,11 @@ import Project from './Project';
 export default () =>
     <React.Fragment>
         {projectList.map(({ id, name, links, skills, description, imageWidth }) => (
-            <FadeInSection fadeClass='fade-in-section'>
+            <FadeInSection
+                key={id}
+                fadeClass='fade-in-section'
+            >
                 <Project
-                    key={id}
                     name={name}
                     skills={skills}
                     description={description}
@@ -25,7 +27,7 @@ const projectList = [
     {
         id: 1,
         name: 'gabrielsvasile.com',
-        skills: ['JavaScript', 'ES6', 'React', 'Tachyons', 'Styled-Components', 'CSS'],
+        skills: ['JavaScript', 'ES6', 'React', 'Tachyons', 'Styled-Components', 'CSS3'],
         description: 'This is a portfolio & resume website.',
         imageWidth: '323',
         links: [
