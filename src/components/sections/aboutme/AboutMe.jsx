@@ -64,7 +64,7 @@ const AboutContainer = styled.div.attrs({
     @media only screen and (max-width: 767px) {
         margin-left: 1rem;
         margin-right: 1rem;
-        width: 25rem;
+        width: 20rem;
     };
 `
 const Idea = styled.p.attrs({
