@@ -29,9 +29,11 @@ const educationList = [
 export default () =>
     <React.Fragment>
         {educationList.map(({ id, school, graduationYear, lastYearAttended, degree, classes, link, backgroundColor, textColor }) => (
-            <FadeInSection fadeClass='fade-in-section'>
+            <FadeInSection
+                key={id}
+                fadeClass='fade-in-section'
+            >
                 <Card
-                    key={id}
                     backgroundColor={backgroundColor ? backgroundColor : 'rgb(0, 0, 0, 0.5)'}
                 >
                     <Degree>

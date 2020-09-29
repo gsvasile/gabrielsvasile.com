@@ -7,12 +7,18 @@ import React from 'react';
 // Assumes that there is a predfined CSS class 'fade-in-section-no-move' that will be used to
 // fade in if the given class (through props.fadeClass) does not exist.
 const FadeInSection = (props) => {
-    const [isVisible, setVisible] = React.useState(true);
+    const [isVisible, setVisible] = React.useState(false);
     const domRef = React.useRef();
     const fadeClass = props.fadeClass ? props.fadeClass : 'fade-in-section-no-move';
     React.useEffect(() => {
         const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => setVisible(entry.isIntersecting));
+
+            // Make it so that each entry is only faded in once. 
+            // The page needs to be refreshed to see the effect again.
+            // To go back to always showing the effect on every intersect,
+            // change the below to:
+            //      entries.forEach(entry => setVisible(entry.isIntersecting));
+            entries.forEach(entry => entry.isIntersecting ? setVisible(true) : '');
         });
         const current = domRef.current;
         observer.observe(current);

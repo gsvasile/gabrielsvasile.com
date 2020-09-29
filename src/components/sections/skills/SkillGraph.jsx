@@ -10,7 +10,7 @@ const skillsConfidenceMap = {
     'JavaScript': '60',
     'React': '60',
     'C++': '50',
-    'CSS': '35',
+    'CSS3': '35',
     'LUA': '50',
     'MySQL': '60',
 };

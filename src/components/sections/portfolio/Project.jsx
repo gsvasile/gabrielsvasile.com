@@ -62,7 +62,7 @@ export default (
                 <ProjectShowCaseItem>
                     <Tilt
                         options={{
-                            max: 10,
+                            max: 50,
                             perspective: 950,
                             scale: 1,
                             transition: true

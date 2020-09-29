@@ -31,7 +31,7 @@ export const skillColors = {
 
     'C++': {
         color: 'rgb(200, 201, 201)',
-        borderColor: 'rgb(70, 255, 188, 0.4)'
+        borderColor: 'rgb(200, 201, 201, 0.4)'
     },
 
     LUA: {
@@ -70,6 +70,16 @@ export const skillColors = {
         borderColor: 'rgba(247, 233, 130, 0.5)',
     },
 
+    CSS3: {
+        color: 'rgb(204, 181, 157)',
+        borderColor: 'rgba(204, 181, 157, 0.5)',
+    },
+
+    HTML5: {
+        color: 'rgb(224, 199, 117)',
+        borderColor: 'rgba(224, 199, 117, 0.5)',
+    },
+
     /* Libraries */
     React: {
         color: 'rgb(97, 218, 251)',
@@ -96,11 +106,6 @@ export const skillColors = {
         borderColor: 'rgba(102, 210, 100, 0.5)',
     },
 
-    CSS: {
-        color: 'rgb(204, 181, 157)',
-        borderColor: 'rgba(102, 210, 100, 0.5)',
-    },
-
     /* Databases */
     PostgreSQL: {
         color: 'rgb(220, 141, 116)',
@@ -108,13 +113,13 @@ export const skillColors = {
     },
 
     MySQL: {
-        color: 'rgb(202, 125, 102)',
-        borderColor: 'rgba(15, 203, 245, 0.5)',
+        color: 'rgb(213, 241, 130)',
+        borderColor: 'rgba(213, 241, 130, 0.5)',
     },
 
     SQLServer: {
         color: 'rgb(219, 141, 96)',
-        borderColor: 'rgba(15, 203, 245, 0.5)',
+        borderColor: 'rgba(219, 141, 96, 0.5)',
     },
 
     MSAccess: {
@@ -126,5 +131,26 @@ export const skillColors = {
     Unity3D: {
         color: 'rgb(194, 59, 12)',
         borderColor: 'rgba(194, 59, 12, 0.5)'
+    },
+
+    /* Tools */
+    VSCode: {
+        color: 'rgb(223, 126, 82)',
+        borderColor: 'rgba(223, 126, 82, 0.5)'
+    },
+
+    'Visual Studio': {
+        color: 'rgb(57, 150, 37)',
+        borderColor: 'rgba(57, 150, 37, 0.5)'
+    },
+
+    'GitHub': {
+        color: 'rgb(200, 200, 200)',
+        borderColor: 'rgba(0, 0, 0, 1)'
+    },
+
+    'npm': {
+        color: 'rgb(248, 114, 33)',
+        borderColor: 'rgba(248, 114, 33, 0.5)'
     },
 }

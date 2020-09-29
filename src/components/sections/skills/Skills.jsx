@@ -1,14 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import SkillGraph from './SkillGraph';
+import SkillDisplay from './SkillDisplay';
 import backgrounds from '../../../assets/backgrounds/backgrounds';
 
 export default () =>
     <Section id='skills'>
         <Header>
-            <SectionName>{'Skills'}</SectionName>
+            <SectionName>
+                {'Skills'}
+                <div>
+                    {'Development tools I use'}
+                </div>
+            </SectionName>
         </Header>
-        <SkillGraph />
+        <SkillDisplay />
     </Section>
 
 const Section = styled.section.attrs({
@@ -34,7 +39,12 @@ const Header = styled.header.attrs({
 })``;
 
 const SectionName = styled.h1.attrs({
-    className: 'f1 center'
+    className: 'f1 center br4'
 })`
     color: #ffffff;
+    background-color: rgba(35, 45, 55, 0.2);
+
+    & div {
+        font-size: 2rem;
+    }
 `;
