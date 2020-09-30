@@ -12,14 +12,15 @@ export default () =>
         </FadeInSection>
         <AboutContainer>
             <Idea>
-                I am passionate about technology and really enjoy working with other talented
-                people.
+                I am passionate about technology and enjoy working with other talented
+                people and business partners to turn an idea into something that people
+                get value out using!
             </Idea>
             <Idea>
                 Learning quickly, I am thrilled to be part of a field that can move fast
-                and where I can consistently hone my skills and knowledge. Whether that is in a
-                particular programming language, or a new library, or getting more familiar with
-                a design pattern and how I can use it to improve products.
+                and where I can hone my skills and knowledge. There is always something to learn in this
+                field: from learning a new library or language to applying a design pattern to improve
+                a product.
             </Idea>
         </AboutContainer>
     </Section>
@@ -32,7 +33,7 @@ const Section = styled.section.attrs({
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    
+
     @media only screen and (max-width: 767px) {
         background-image: url(${backgrounds.small_width});
         background-repeat: no-repeat;
@@ -62,17 +63,17 @@ const SectionName = styled.h1.attrs({
     className: 'f1 center'
 })`
     color: rgb(215, 215, 215);
-    @media only screen and (max-width: 767px) { 
-        color: white;       
+    @media only screen and (max-width: 767px) {
+        color: white;
         background-color: rgba(35, 45, 55, 0.2);
     };
 `;
 
 const AboutContainer = styled.div.attrs({
     className: 'ba br3 white ml5-ns mr5-ns tc pl2 pr1 tracked'
-})`    
+})`
     background: linear-gradient(to left, rgba(75, 85, 85, 1), rgba(10, 10, 10, 0.9) 20%);
-    
+
     @media only screen and (max-width: 767px) {
         margin-left: 1rem;
         margin-right: 1rem;
