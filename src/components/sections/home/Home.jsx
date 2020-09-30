@@ -111,7 +111,7 @@ const SmImg = styled(WideImg).attrs({
 const LocalLinkWrapper = styled.div.attrs({
     className: 'flex flex-row justify-between items-center w-100 o-30'
 })`
-    transform: translate(0, 6rem);
+    transform: translate(0, 2rem);
 `;
 
 const LocalLink = styled.a.attrs({
