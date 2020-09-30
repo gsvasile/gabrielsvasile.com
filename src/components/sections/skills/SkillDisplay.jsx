@@ -38,7 +38,12 @@ const getSkillLists = () => {
     for (let entry in sortedCategoryKeys) {
         object[entry] = getCategorizedSkillLists(sortedCategoryKeys[entry]);
     }
-    return [getSkills(object[0]), getSkills(object[1]), getSkills(object[2]), getSkills(object[3])];
+    return [
+        getSkills(object[0]),
+        getSkills(object[1]),
+        getSkills(object[2]),
+        getSkills(object[3])
+    ];
 };
 
 /// Get the column sizes and the headers.
@@ -79,7 +84,7 @@ export default () => {
 
 const GridContainer = styled.div.attrs({
     className: 'ba br3 white bg-black-10'
-})`    
+})`
     display: grid;
     grid-template-columns: ${props => props.numColumns};
     background-image: linear-gradient(to right, rgba(75, 85, 95, 0.8), rgba(0, 0, 0, 0.5));
@@ -88,7 +93,7 @@ const GridContainer = styled.div.attrs({
 
 const GridHeaderElement = styled.div.attrs({
     className: 'br'
-})`    
+})`
     grid-area: 1 / ${props => props.columnStart} / 1 / ${props => props.columnEnd};
     border-bottom: dotted 1px white;
 `;

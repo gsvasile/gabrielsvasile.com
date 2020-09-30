@@ -19,9 +19,9 @@ const Section = styled.section.attrs({
     background-image:   linear-gradient(rgba(0,0,0,0.2), rgba(0, 0, 0, 0)),
                         url(${backgrounds.skills_medium});
     background-attachment: fixed;
-    padding-left: 10rem;
-    padding-right: 10rem;
-    
+    padding-left: 7rem;
+    padding-right: 7rem;
+
     @media only screen and (max-width: 767px) {
         background: url(${backgrounds.small_width}) no-repeat center;
         padding-left: 1rem;
