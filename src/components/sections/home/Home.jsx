@@ -34,6 +34,13 @@ export default function Home() {
                         />
                     </Link>
                 </LinkWrapper>
+                <LocalLink className='link' href="#experience">
+                    <LocalLinkWrapper>
+                        <div>↓</div>
+                        <div>↓</div>
+                        <div>↓</div>
+                    </LocalLinkWrapper>
+                </LocalLink>
             </Links>
         </Section>
     );
@@ -100,3 +107,20 @@ const WideImg = styled(Img).attrs({
 const SmImg = styled(WideImg).attrs({
     className: 'less-wide',
 })``;
+
+const LocalLinkWrapper = styled.div.attrs({
+    className: 'flex flex-row justify-between items-center w-100 o-30'
+})`
+    transform: translate(0, 6rem);
+`;
+
+const LocalLink = styled.a.attrs({
+    className: 'link white'
+})`
+    font-size: 5rem;
+
+    :hover {
+        color: rgb(254, 216, 104);
+        opacity: 1;
+    }
+`;
