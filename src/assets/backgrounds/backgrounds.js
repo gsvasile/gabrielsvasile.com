@@ -13,9 +13,10 @@ export default {
     'skills_medium': require('./images/bg_skills_1080x810.jpg'),
     'skills_small': require('./images/bg_skills_640x440.jpg'),
     'education_large': require('./images/bg_education_2700x1867.jpg'),
-    'education_medium': require('./images/bg_education_1200x480.jpg'),
+    'education_medium': require('./images/bg_education_1301x751.jpg'),
     'education_small': require('./images/bg_education_550x224.jpg'),
     'about_large': require('./images/bg_about_2400x1600.jpg'),
     'about_medium': require('./images/bg_about_1980x1280.jpg'),
-    'about_small': require('./images/bg_about_640x426.jpg')
+    'about_small': require('./images/bg_about_640x426.jpg'),
+    'small_width': require('./images/bg_small_width_640x320.jpg')
 };

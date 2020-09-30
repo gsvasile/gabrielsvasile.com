@@ -46,9 +46,13 @@ const Section = styled.section.attrs({
                       url(${backgrounds.home_medium});
     background-attachment: fixed;
 
-    @media only screen and (max-width: 767px) {        
-        background-image:   linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-                            url(${backgrounds.home_small});
+    @media only screen and (max-width: 767px) {
+        background-image: url(${backgrounds.home_small});
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: scroll;
+
     };
 `;
 

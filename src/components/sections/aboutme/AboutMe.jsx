@@ -25,13 +25,21 @@ export default () =>
     </Section>
 
 const Section = styled.section.attrs({
-    className: 'bg-center cover pl5-ns pr5-ns pa6 flex items-center justify-center'
+    className: ' pl5-ns pr5-ns pa6 flex items-center justify-center'
 })`
-    background-image:   url(${backgrounds.about_medium});
+    background-image: url(${backgrounds.about_medium});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     background-attachment: fixed;
     
-    @media only screen and (max-width: 767px) {        
-        background-image:  url(${backgrounds.home_small});
+    @media only screen and (max-width: 767px) {
+        background-image: url(${backgrounds.small_width});
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: scroll;
+
         flex-flow: column nowrap;
         padding-left: 1rem;
         padding-right: 1rem;
@@ -54,6 +62,10 @@ const SectionName = styled.h1.attrs({
     className: 'f1 center'
 })`
     color: rgb(215, 215, 215);
+    @media only screen and (max-width: 767px) { 
+        color: white;       
+        background-color: rgba(35, 45, 55, 0.2);
+    };
 `;
 
 const AboutContainer = styled.div.attrs({

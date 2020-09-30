@@ -4,7 +4,7 @@ import SkillList from '../../skilllist/SkillList';
 import FadeInSection from '../../effects/FadeInSection';
 
 const categoriesHeadings = {
-    web: 'Web Development',
+    web: 'Web Dev',
     lang: 'Laguages',
     data: 'Data',
     tool: 'Tools'
@@ -14,11 +14,10 @@ const categoriesHeadings = {
 const skillCategoryMap = [
     { skill: 'JavaScript', category: 'lang' },
     { skill: 'C#', category: 'lang' },
-    { skill: 'Unity3D', category: 'game' },
     { skill: 'React', category: 'web' },
     { skill: 'C++', category: 'lang' },
     { skill: 'CSS3', category: 'web' },
-    { skill: 'LUA', category: 'game' },
+    { skill: 'LUA', category: 'lang' },
     { skill: 'MySQL', category: 'data' },
     { skill: 'SQLServer', category: 'data' },
     { skill: 'PHP', category: 'lang' },
@@ -44,7 +43,7 @@ const getSkillLists = () => {
 
 /// Get the column sizes and the headers.
 const getTemplateColumns = () => Object.keys(categoriesHeadings).map(() => {
-    return 'auto';
+    return '25%';
 });
 const sortedCategories = Object.values(categoriesHeadings).sort();
 

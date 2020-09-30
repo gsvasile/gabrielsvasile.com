@@ -8,9 +8,6 @@ export default () =>
         <Header>
             <SectionName>
                 {'Skills'}
-                <div>
-                    {'Development tools I use'}
-                </div>
             </SectionName>
         </Header>
         <SkillDisplay />
@@ -22,12 +19,11 @@ const Section = styled.section.attrs({
     background-image:   linear-gradient(rgba(0,0,0,0.2), rgba(0, 0, 0, 0)),
                         url(${backgrounds.skills_medium});
     background-attachment: fixed;
-    padding-left: 8rem;
-    padding-right: 8rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
     
-    @media only screen and (max-width: 767px) {        
-        background-image:   linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-                            url(${backgrounds.home_small});
+    @media only screen and (max-width: 767px) {
+        background: url(${backgrounds.small_width}) no-repeat center;
         padding-left: 1rem;
         padding-right: 1rem;
 

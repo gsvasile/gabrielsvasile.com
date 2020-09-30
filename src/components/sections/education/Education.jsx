@@ -17,18 +17,21 @@ const Section = styled.section.attrs({
 })`
     background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, 0)),
                 url(${ucscLogo}) no-repeat bottom left, 
-                url(${backgrounds.education_medium}) no-repeat  fixed;
+                url(${backgrounds.education_medium}) no-repeat center fixed;
     background-size: 1rem, 200px, cover;
     padding-left: 10rem;
     padding-right: 10rem;
 
-    @media only screen and (max-width: 767px) {        
-        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-                    url(${backgrounds.home_small}) no-repeat center fixed;
-        background-size: 1vh, cover;
+    @media only screen and (max-width: 767px) {
+        background-image: url(${ucscLogo}), url(${backgrounds.small_width});
+        background-repeat: no-repeat, no-repeat;
+        background-position: bottom center, center;
+        background-size: 10rem, cover;
+        background-attachment: scroll, scroll;
+
         padding-left: 1rem;
         padding-right: 1rem;
-};
+    };
 `;
 
 const Header = styled.header.attrs({
@@ -38,7 +41,9 @@ const Header = styled.header.attrs({
 const SectionName = styled.h1.attrs({
     className: 'f1 center white'
 })`
-    color: #rgb(15, 105, 200);
+    @media only screen and (max-width: 767px) {        
+        background-color: rgba(35, 45, 55, 0.2);
+    };
 `;
 
 
