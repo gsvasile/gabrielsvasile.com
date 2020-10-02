@@ -50,7 +50,7 @@ const experienceList = [
         company: 'Vital Systems',
         link: 'https://vitalsystems.com/',
         dates: 'March 2005 - March 2006',
-        skills: ['PHP', 'SQLServer', 'MSAccess'],
+        skills: ['PHP', 'SQLServer', 'MSAccess', 'VBA'],
         bullet1: '• Developed and maintained the in-house ERP software system using VBA, MS Access, and SQL Server.',
         bullet2: '• Renovated and enhanced the company website using HTML, PHP and SQL.',
         bullet3: '• Led and trained a team to operate an Automated Optical Imaging machine that verifies surface-mounted circuits onto a PCB.',
