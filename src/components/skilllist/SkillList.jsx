@@ -12,11 +12,11 @@ export default ({ skillItems }) =>
 
 const SkillItem = styled.div.attrs({
     className: 'dib bg-black-50 br-pill b--solid bw1 ln-solid nowrap pt0 pb0 pr1 pl1 ma2'
-})`    
+})`
     color: ${props => skillColors[props.skillItem] && skillColors[props.skillItem].color};
     border-color: ${props => skillColors[props.skillItem] && skillColors[props.skillItem].borderColor};
 
-    @media only screen and (max-width: 767px) {        
+    @media only screen and (max-width: 767px) {
         margin-top: 2px;
         margin-bottom: 2px;
     };
@@ -147,6 +147,11 @@ export const skillColors = {
     'GitHub': {
         color: 'rgb(200, 200, 200)',
         borderColor: 'rgba(0, 0, 0, 1)'
+    },
+
+    'Perforce': {
+        color: 'rgb(250, 190, 150)',
+        borderColor: 'rgba(250, 190, 150, .5)'
     },
 
     'npm': {

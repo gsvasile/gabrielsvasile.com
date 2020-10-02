@@ -24,7 +24,8 @@ const skillCategoryMap = [
     { skill: 'VSCode', category: 'tool' },
     { skill: 'Visual Studio', category: 'tool' },
     { skill: 'HTML5', category: 'web' },
-    { skill: 'GitHub', category: 'web' },
+    { skill: 'GitHub', category: 'tool' },
+    { skill: 'Perforce', category: 'tool' },
     { skill: 'npm', category: 'web' },
     { skill: 'Unity3D', category: 'tool' },
 ];
