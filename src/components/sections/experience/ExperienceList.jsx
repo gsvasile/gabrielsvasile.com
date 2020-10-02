@@ -53,7 +53,7 @@ const experienceList = [
         skills: ['PHP', 'SQLServer', 'MSAccess'],
         bullet1: '• Developed and maintained the in-house ERP software system using VBA, MS Access, and SQL Server.',
         bullet2: '• Renovated and enhanced the company website using HTML, PHP and SQL.',
-        bullet3: '• Led a team that ran and verified an automated system for mounting circuits onto a PCB.',
+        bullet3: '• Led and trained a team to operate an Automated Optical Imaging machine that verifies surface-mounted circuits onto a PCB.',
         bullet4: '• Assisted with turnkey quotes and material procurement for customers.',
     }
 ];
