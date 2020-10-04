@@ -5,9 +5,9 @@ import FadeInSection from '../../effects/FadeInSection';
 
 const categoriesHeadings = {
     web: 'Web Dev',
-    lang: 'Laguages',
+    lang: 'Languages',
     data: 'Data',
-    tool: 'Tools'
+    tool: 'Tools',
 }
 
 // This contains the skills mapped to a confidence level.
@@ -36,21 +36,16 @@ const sortedCategoryKeys = Object.keys(categoriesHeadings).sort();
 const getCategorizedSkillLists = (category) => skillCategoryMap.filter(entry => entry.category === category);
 const getSkillLists = () => {
     let object = {};
-    for (let entry in sortedCategoryKeys) {
-        object[entry] = getCategorizedSkillLists(sortedCategoryKeys[entry]);
+    for (let entry of sortedCategoryKeys) {
+        object[categoriesHeadings[entry]] = getCategorizedSkillLists(entry);
     }
-    return [
-        getSkills(object[0]),
-        getSkills(object[1]),
-        getSkills(object[2]),
-        getSkills(object[3])
-    ];
+    // Get the individual lists, sorted according to the keys so they match the
+    // category headings.
+    const sortedLists = Object.keys(object).sort().map((key) => object[key]);
+    return sortedLists.map(list => getSkills(list));
 };
 
-/// Get the column sizes and the headers.
-const getTemplateColumns = () => Object.keys(categoriesHeadings).map(() => {
-    return '25%';
-});
+const getTemplateColumns = () => 'repeat(' + Object.keys(categoriesHeadings).length + ', 1fr)';
 const sortedCategories = Object.values(categoriesHeadings).sort();
 
 export default () => {
@@ -58,7 +53,7 @@ export default () => {
     let numberOfRows = skillCategoryMap.length;
     return (
         <FadeInSection fadeClass='fade-in-section'>
-            <GridContainer numColumns={getTemplateColumns().toString().replace(/,/g, ' ')}>
+            <GridContainer numColumns={getTemplateColumns()}>
                 {sortedCategories.map((category, index) => (
                     <GridHeaderElement
                         key={'skillHeader' + index}
@@ -70,7 +65,7 @@ export default () => {
                 ))}
                 {getSkillLists().map((list, index) => (
                     <SkillItems
-                        key={'skillList' + index}
+                        key={'skillList' + (index * Math.random())}
                         numRowLines={numberOfRows}
                         columnStart={columnCountToPlace}
                         columnEnd={++columnCountToPlace}
@@ -79,7 +74,7 @@ export default () => {
                     </SkillItems>
                 ))}
             </GridContainer>
-        </FadeInSection>
+        </FadeInSection >
     );
 }
 
