@@ -10,7 +10,7 @@ const categoriesHeadings = {
     tool: 'Tools',
 }
 
-// This contains the skills mapped to a confidence level.
+// This contains the skills mapped to a category.
 const skillCategoryMap = [
     { skill: 'JavaScript', category: 'lang' },
     { skill: 'C#', category: 'lang' },
