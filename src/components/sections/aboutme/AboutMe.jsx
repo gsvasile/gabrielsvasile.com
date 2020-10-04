@@ -12,21 +12,21 @@ export default () =>
         </FadeInSection>
         <AboutContainer>
             <Idea>
-                I am passionate about technology and enjoy working with other talented
-                people and business partners to turn an idea into something that people
-                get value out using!
+                {'I am passionate about technology and enjoy working with other talented '}
+                {'people and business partners to turn an idea into something that people '}
+                {'get value out using!'}
             </Idea>
             <Idea>
-                Learning quickly, I am thrilled to be part of a field that can move fast
-                and where I can hone my skills and knowledge. There is always something to learn in this
-                field: from learning a new library or language to applying a design pattern to improve
-                a product.
+                {'Learning quickly, I am thrilled to be part of a field that can move fast '}
+                {'and where I can hone my skills and knowledge. There is always something to learn in this '}
+                {'field: from learning a new library or language to applying a design pattern to improve '}
+                {'a product.'}
             </Idea>
         </AboutContainer>
     </Section>
 
 const Section = styled.section.attrs({
-    className: ' pl5-ns pr5-ns pa6 flex items-center justify-center'
+    className: ' pl5-ns pr5-ns pa4 flex items-center justify-center'
 })`
     background-image: url(${backgrounds.about_medium});
     background-repeat: no-repeat;
@@ -75,9 +75,9 @@ const AboutContainer = styled.div.attrs({
     background: linear-gradient(to left, rgba(75, 85, 85, 1), rgba(10, 10, 10, 0.9) 20%);
 
     @media only screen and (max-width: 767px) {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        width: 20rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        width: 100%;
     };
 `
 const Idea = styled.p.attrs({
