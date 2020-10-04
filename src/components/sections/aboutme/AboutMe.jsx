@@ -75,8 +75,8 @@ const AboutContainer = styled.div.attrs({
     background: linear-gradient(to left, rgba(75, 85, 85, 1), rgba(10, 10, 10, 0.9) 20%);
 
     @media only screen and (max-width: 767px) {
-        padding-left: 0rem;
-        padding-right: 0rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
         width: 100%;
     };
 `
