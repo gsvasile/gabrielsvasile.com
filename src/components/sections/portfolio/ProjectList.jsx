@@ -34,5 +34,17 @@ const projectList = [
             { type: 'githubbutton', text: 'Source Code', link: 'https://github.com/gsvasile/gabrielsvasile.com' },
             { type: 'live', text: 'Visit Live', link: 'http://gabrielsvasile.com' }
         ]
+    },
+    {
+        id: 0,
+        name: 'Face detection AI',
+        skills: ['JavaScript', 'ES6', 'React', 'Tachyons', 'Styled-Components', 'CSS3', 'Nodejs', 'PostgreSQL'],
+        description: 'This is full-stack project with user accounts stored in a database. This will detect faces in user-supplied images.',
+        imageWidth: '325',
+        links: [
+            { type: 'githubbutton', text: 'Front End', link: 'https://github.com/gsvasile/face-detection-ai' },
+            { type: 'githubbutton', text: 'Back End', link: 'https://github.com/gsvasile/face-detection-ai-API' },
+            { type: 'live', text: 'Visit Live', link: 'https://face-detection-gsv.herokuapp.com/' }
+        ]
     }
 ];

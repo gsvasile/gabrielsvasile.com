@@ -95,7 +95,8 @@ const ProjectGridContainer = styled.div`
         'description    projectShowCase'
         'projectLinks   projectShowCase';
     /* Expand the columns to a predifined widths */
-    grid-template-columns: minmax(0, 43%) minmax(43%, 100%);
+    ${'' /* grid-template-columns: minmax(0, 43%) minmax(43%, 100%); */}
+    grid-template-columns: 1fr 1fr;
     padding: 2px;
 `;
 
@@ -114,7 +115,7 @@ const SkillItems = styled.div.attrs({
 `;
 
 const DescriptionItem = styled.div.attrs({
-    className: 'flex justify-start items-center pl1 tl'
+    className: 'flex justify-start items-start pl1 tl'
 })`
     grid-area: description;
     grid-row: 3 / span 2;
@@ -146,7 +147,7 @@ const Link = styled.a.attrs({
 })``;
 
 const Buttons = styled.div.attrs({
-    className: 'flex justify-between items-end'
+    className: 'flex flex-row justify-between items-center'
 })`
     grid-area: projectLinks;
     background-image: linear-gradient(rgba(20, 20, 20, 0), rgba(50, 50, 150, 0.3));
