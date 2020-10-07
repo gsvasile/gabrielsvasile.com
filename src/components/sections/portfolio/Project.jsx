@@ -147,7 +147,7 @@ const Link = styled.a.attrs({
 })``;
 
 const Buttons = styled.div.attrs({
-    className: 'flex flex-row justify-between items-center'
+    className: 'flex flex-row-ns justify-between items-center'
 })`
     grid-area: projectLinks;
     background-image: linear-gradient(rgba(20, 20, 20, 0), rgba(50, 50, 150, 0.3));
@@ -156,6 +156,7 @@ const Buttons = styled.div.attrs({
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-size: 13px;
     }
 `;
 
