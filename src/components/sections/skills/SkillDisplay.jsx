@@ -28,6 +28,8 @@ const skillCategoryMap = [
     { skill: 'Perforce', category: 'tool' },
     { skill: 'npm', category: 'web' },
     { skill: 'Unity3D', category: 'tool' },
+    { skill: 'Nodejs', category: 'web' },
+    { skill: 'PostgreSQL', category: 'data' },
 ];
 
 /// Get the skill lists from the category headings and skill category map.
