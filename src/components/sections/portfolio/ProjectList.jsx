@@ -39,7 +39,7 @@ const projectList = [
         id: 0,
         name: 'Face detection AI',
         skills: ['JavaScript', 'ES6', 'React', 'Tachyons', 'Styled-Components', 'CSS3', 'Nodejs', 'PostgreSQL'],
-        description: 'This is full-stack project with user accounts stored in a database. This will detect faces in user-supplied images.',
+        description: 'This is a full-stack project with user accounts stored in a database. <br /> This will detect faces in user-supplied images.',
         imageWidth: '325',
         links: [
             { type: 'githubbutton', text: 'Front End', link: 'https://github.com/gsvasile/face-detection-ai' },
