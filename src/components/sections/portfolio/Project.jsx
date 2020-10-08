@@ -44,7 +44,7 @@ export default (
     }
 ) => {
 
-    let buttons = GetButtonsJSX(links);
+    const buttons = GetButtonsJSX(links);
 
     return (
         <Project>
@@ -95,7 +95,6 @@ const ProjectGridContainer = styled.div`
         'description    projectShowCase'
         'projectLinks   projectShowCase';
     /* Expand the columns to a predifined widths */
-    ${'' /* grid-template-columns: minmax(0, 43%) minmax(43%, 100%); */}
     grid-template-columns: 1fr 1fr;
     padding: 2px;
 `;
@@ -140,12 +139,6 @@ const ShowCaseDisplay = styled.img.attrs({
     box-shadow: 0 5px 15px rgb(155, 155, 155);
 `;
 
-const Link = styled.a.attrs({
-    className: 'link',
-    target: '_blank',
-    rel: 'noopener noreferrer'
-})``;
-
 const Buttons = styled.div.attrs({
     className: 'flex flex-row-ns justify-between items-center'
 })`
@@ -160,11 +153,15 @@ const Buttons = styled.div.attrs({
     }
 `;
 
-const Button = styled.button.attrs({
-    className: 'flex justify-between items-center bg-black br4 white h-25'
-})`
-    cursor: pointer;
+const Link = styled.a.attrs({
+    className: 'link',
+    target: '_blank',
+    rel: 'noopener noreferrer'
+})``;
 
+const Button = styled.button.attrs({
+    className: 'flex justify-between items-center bg-black br4 white h-25 pointer'
+})`
     @media only screen and (max-width: 767px) {
         margin-top: 5px;
     }
