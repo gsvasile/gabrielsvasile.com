@@ -140,13 +140,12 @@ const ShowCaseDisplay = styled.img.attrs({
 `;
 
 const Buttons = styled.div.attrs({
-    className: 'flex flex-row-ns justify-between items-center'
+    className: 'flex justify-between items-center'
 })`
     grid-area: projectLinks;
     background-image: linear-gradient(rgba(20, 20, 20, 0), rgba(50, 50, 150, 0.3));
 
     @media only screen and (max-width: 767px) {
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         font-size: 13px;
@@ -160,7 +159,7 @@ const Link = styled.a.attrs({
 })``;
 
 const Button = styled.button.attrs({
-    className: 'flex justify-between items-center bg-black br4 white h-25 pointer'
+    className: 'flex justify-around items-center bg-black br4 white h-25 pointer'
 })`
     @media only screen and (max-width: 767px) {
         margin-top: 5px;
