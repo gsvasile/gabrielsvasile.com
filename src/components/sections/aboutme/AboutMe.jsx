@@ -14,7 +14,7 @@ export default () =>
             <Idea>
                 {'I am passionate about technology and enjoy working with other talented '}
                 {'people and business partners to turn an idea into something that people '}
-                {'get value out using!'}
+                {'get value out of using!'}
             </Idea>
             <Idea>
                 {'Learning quickly, I am thrilled to be part of a field that can move fast '}
