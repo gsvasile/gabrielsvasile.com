@@ -1,5 +1,5 @@
 
-export default {
+const backgrounds = {
     'home_large': require('./images/bg_home_2400x1600.jpg'),
     'home_medium': require('./images/bg_home_1920x1280.jpg'),
     'home_small': require('./images/bg_home_640x426.jpg'),
@@ -20,3 +20,5 @@ export default {
     'about_small': require('./images/bg_about_640x426.jpg'),
     'small_width': require('./images/bg_small_width_640x320.jpg')
 };
+
+export default backgrounds;
