@@ -8,7 +8,7 @@ const educationList = [
         id: 1,
         school: 'TMCC',
         graduationYear: undefined,
-        lastYearAttended: '2008',
+        lastYearAttended: '',
         degree: undefined,
         classes: 'Advanced C# & Database Design Classes',
         link: undefined,
@@ -16,7 +16,7 @@ const educationList = [
     {
         id: 0,
         school: 'University of California, Santa Cruz',
-        graduationYear: '2004',
+        graduationYear: '',
         lastYearAttended: '',
         degree: 'Computer Engineering, BS',
         classes: undefined,
@@ -68,8 +68,8 @@ const Card = styled.div.attrs({
 const Degree = styled.div.attrs({
     className: 'flex justify-start pa1 f4 bb'
 })`
-    @media only screen and (max-width: 767px) {        
-        font-size: 15px;        
+    @media only screen and (max-width: 767px) {
+        font-size: 15px;
 `;
 
 const School = styled.div.attrs({
@@ -77,6 +77,6 @@ const School = styled.div.attrs({
 })`
     color: ${props => props ? props.textColor : 'rgb(255, 255, 255, 0.8)'};
 
-    @media only screen and (max-width: 767px) {        
+    @media only screen and (max-width: 767px) {
             font-size: 13px;
 `;
