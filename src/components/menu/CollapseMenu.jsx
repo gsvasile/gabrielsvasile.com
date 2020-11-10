@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { useSpring, animated } from 'react-spring';
 
-const CollapseMenu = (props) => {
+export default function CollapseMenu(props) {
     const { open } = useSpring({ open: props.navbarState ? 0 : 1 });
 
     if (props.navbarState === true) {
@@ -35,8 +35,6 @@ const CollapseMenu = (props) => {
     }
     return null;
 };
-
-export default CollapseMenu;
 
 const CollapseWrapper = styled(animated.div).attrs({
     className: 'fixed z-1'

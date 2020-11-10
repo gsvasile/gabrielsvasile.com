@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import backgrounds from '../../../assets/backgrounds/backgrounds';
 import ProjectList from './ProjectList';
 
-export default () =>
+const Portfolio = () =>
     <Section id='portfolio'>
         <Header>
             <SectionName>{'Personal Projects'}</SectionName>
@@ -11,8 +11,9 @@ export default () =>
         <ProjectList />
     </Section>
 
+export default Portfolio;
 
-
+// Styled Components Section //
 const Section = styled.section.attrs({
     className: 'bg-center cover pb5'
 })`
@@ -21,14 +22,14 @@ const Section = styled.section.attrs({
     background-attachment: fixed;
     padding-left: 8rem;
     padding-right: 8rem;
-    
+
     @media only screen and (max-width: 767px) {
         background-image: url(${backgrounds.small_width});
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         background-attachment: scroll;
-        
+
         padding-left: 1rem;
         padding-right: 1rem;
     };

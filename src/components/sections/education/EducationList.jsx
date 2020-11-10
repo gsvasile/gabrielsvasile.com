@@ -26,7 +26,7 @@ const educationList = [
     },
 ];
 
-export default () =>
+const EducationList = () =>
     <React.Fragment>
         {educationList.map(({ id, school, graduationYear, lastYearAttended, degree, classes, link, backgroundColor, textColor }) => (
             <FadeInSection
@@ -56,6 +56,8 @@ export default () =>
             </FadeInSection>
         ))}
     </React.Fragment>
+
+export default EducationList;
 
 const Card = styled.div.attrs({
     className: 'ba br3 white bg-black-80 mb2'

@@ -33,7 +33,7 @@ const GetButtonsJSX = (links) => {
     }
 }
 
-export default (
+export default function Project(
     {
         name,
         skills,
@@ -42,12 +42,12 @@ export default (
         imageWidth,
         links
     }
-) => {
+) {
 
     const buttons = GetButtonsJSX(links);
 
     return (
-        <Project>
+        <ProjectWrapper>
             <ProjectGridContainer>
                 <Name>{name}</Name>
                 <SkillItems>
@@ -78,11 +78,11 @@ export default (
                     </Tilt>
                 </ProjectShowCaseItem>
             </ProjectGridContainer>
-        </Project>
+        </ProjectWrapper>
     );
 }
 
-const Project = styled.article.attrs({
+const ProjectWrapper = styled.article.attrs({
     className: 'bg-black-20 ba br3 white mb3'
 })``;
 

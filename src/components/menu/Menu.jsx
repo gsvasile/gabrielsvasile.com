@@ -7,8 +7,7 @@ import { useSpring, animated, config } from "react-spring";
 import BurgerMenu from "./BurgerMenu";
 import CollapseMenu from "./CollapseMenu";
 
-
-export default (props) => {
+export default function Menu(props) {
     const links = [
         { link: '#home', label: 'Home' },
         { link: '#experience', label: 'Experience' },
@@ -92,8 +91,8 @@ const BurgerWrapper = styled.div`
 
 const Link = styled.a.attrs({
     className: 'link white-90'
-})`    
-    @media only screen and (max-width: 767px) {        
+})`
+    @media only screen and (max-width: 767px) {
         color: white;
     };
 `;

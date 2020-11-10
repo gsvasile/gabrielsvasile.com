@@ -4,7 +4,7 @@ import EducationList from './EducationList';
 import backgrounds from '../../../assets/backgrounds/backgrounds';
 import ucscLogo from './ucsc-logo.png';
 
-export default () =>
+const Education = () =>
     <Section id='education'>
         <Header>
             <SectionName>Education</SectionName>
@@ -12,11 +12,13 @@ export default () =>
         <EducationList />
     </Section>
 
+export default Education;
+
 const Section = styled.section.attrs({
     className: 'pb5'
 })`
     background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, 0)),
-                url(${ucscLogo}) no-repeat bottom left, 
+                url(${ucscLogo}) no-repeat bottom left,
                 url(${backgrounds.education_medium}) no-repeat center fixed;
     background-size: 1rem, 200px, cover;
     padding-left: 10rem;
@@ -41,7 +43,7 @@ const Header = styled.header.attrs({
 const SectionName = styled.h1.attrs({
     className: 'f1 center white'
 })`
-    @media only screen and (max-width: 767px) {        
+    @media only screen and (max-width: 767px) {
         background-color: rgba(35, 45, 55, 0.2);
     };
 `;

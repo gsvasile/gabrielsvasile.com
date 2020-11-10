@@ -8,9 +8,9 @@ if (currentYear === createdYear) {
     currentYear = undefined;
 }
 
-const Footer = () => {
+export default function Footer() {
     return (
-        <FooterTag>
+        <FooterContainer>
             <Link href='https://www.linkedin.com/in/gabrielsvasile'>
                 <Img alt='LinkedIn® bug' src={icons.linkedinbug} />
             </Link>
@@ -20,13 +20,11 @@ const Footer = () => {
             <Span>
                 {'©' + createdYear + (currentYear ? '-' + currentYear : '')}
             </Span>
-        </FooterTag>
+        </FooterContainer>
     );
 }
 
-export default Footer;
-
-const FooterTag = styled.footer.attrs({
+const FooterContainer = styled.footer.attrs({
     className: 'f3 white w-100 flex items-center justify-center '
 })`
     bottom: 0;

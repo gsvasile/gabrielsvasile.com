@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import SkillDisplay from './SkillDisplay';
 import backgrounds from '../../../assets/backgrounds/backgrounds';
 
-export default () =>
+const Skills = () =>
     <Section id='skills'>
         <Header>
             <SectionName>
@@ -12,6 +12,8 @@ export default () =>
         </Header>
         <SkillDisplay />
     </Section>
+
+export default Skills;
 
 const Section = styled.section.attrs({
     className: 'bg-center cover pb5'

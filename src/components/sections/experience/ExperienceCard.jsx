@@ -2,7 +2,7 @@ import React from 'react';
 import SkillList from '../../skilllist/SkillList';
 import styled from 'styled-components';
 
-export default (
+export default function ExperienceCard(
     {
         title,
         subTitle,
@@ -12,7 +12,7 @@ export default (
         skills,
         experience
     }
-) => {
+) {
 
     // Only include a subtitle if it exists.
     const subTitlePart = (subTitle) ? <span className='wide-only'> - {subTitle}</span> : <span />;

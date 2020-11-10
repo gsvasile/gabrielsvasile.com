@@ -2,7 +2,7 @@ import React from 'react';
 import FadeInSection from '../../effects/FadeInSection';
 import ExperienceCard from './ExperienceCard';
 
-export default () =>
+const ExperienceList = () =>
     <React.Fragment>
         {experienceList.map(({ id, title, subTitle, company, link, dates, skills, ...experience }) => (
             <FadeInSection key={id} fadeClass='fade-in-section'>
@@ -18,6 +18,8 @@ export default () =>
             </FadeInSection>
         ))}
     </React.Fragment>
+
+export default ExperienceList;
 
 // This contains the job experiences, etc. starting with the most recent.
 const experienceList = [

@@ -3,7 +3,7 @@ import images from '../../../assets/projectimages/projectImages';
 import FadeInSection from '../../effects/FadeInSection';
 import Project from './Project';
 
-export default () =>
+const ProjectList = () =>
     <React.Fragment>
         {projectList.map(({ id, name, links, skills, description, imageWidth }) => (
             <FadeInSection
@@ -21,6 +21,8 @@ export default () =>
             </FadeInSection>
         ))}
     </React.Fragment>
+
+export default ProjectList;
 
 // This contains the job experiences, etc. starting with the most recent.
 const projectList = [

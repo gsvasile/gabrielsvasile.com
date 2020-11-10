@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default ({ skillItems }) =>
+const SkillList = ({ skillItems }) =>
     <React.Fragment>
         {skillItems.map((skillItem) => (
             <SkillItem skillItem={skillItem} key={`skillItem-${skillItem}`}>
@@ -9,6 +9,8 @@ export default ({ skillItems }) =>
             </SkillItem>
         ))}
     </React.Fragment>;
+
+export default SkillList;
 
 const SkillItem = styled.div.attrs({
     className: 'dib bg-black-50 br-pill b--solid bw1 ln-solid nowrap pt0 pb0 pr1 pl1 ma2'

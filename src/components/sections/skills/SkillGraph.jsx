@@ -15,7 +15,7 @@ const skillsConfidenceMap = {
     'MySQL': '60',
 };
 
-export default () =>
+const SkillGraph = () =>
     <FadeInSection fadeClass='fade-in-section'>
         <GridContainer>
             <GridHeaderLeft>
@@ -36,9 +36,12 @@ export default () =>
         </GridContainer>
     </FadeInSection>
 
+export default SkillGraph;
+
+// Styled Components Section //
 const GridContainer = styled.div.attrs({
     className: 'ba br3 white bg-black-10'
-})`    
+})`
     display: grid;
     grid-template-columns: 170px auto;
     background-image: linear-gradient(to right, rgba(75, 85, 95, 0.8), rgba(0, 0, 0, 0.5));

@@ -1,10 +1,15 @@
+import linkedinlogo from './images/lilogo.png';
+import linkedinbug from './images/LI-In-Bug.png';
+import githubbug from './images/GitHub-Mark-Light-64px.png';
+import githubbutton from './images/GitHub-Mark-Light-32px.png';
+import githublogo from './images/GitHub_LogoBug_White_Merge.png';
 
 const icons = {
-    githubbug: require('./images/GitHub-Mark-Light-64px.png'),
-    githubbutton: require('./images/GitHub-Mark-Light-32px.png'),
-    githublogo: require('./images/GitHub_LogoBug_White_Merge.png'),
-    linkedinbug: require('./images/LI-In-Bug.png'),
-    linkedinlogo: require('./images/lilogo.png')
+    'githubbug': githubbug,
+    'githubbutton': githubbutton,
+    'githublogo': githublogo,
+    'linkedinbug': linkedinbug,
+    'linkedinlogo': linkedinlogo
 };
 
 export default icons;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import backgrounds from '../../../assets/backgrounds/backgrounds';
 import FadeInSection from '../../effects/FadeInSection';
 
-export default () =>
+const AboutMe = () =>
     <Section id='about'>
         <FadeInSection fadeClass='fade-in-from-right'>
             <Header>
@@ -25,6 +25,9 @@ export default () =>
         </AboutContainer>
     </Section>
 
+export default AboutMe;
+
+// Styled Components Section //
 const Section = styled.section.attrs({
     className: ' pl5-ns pr5-ns pa4 flex items-center justify-center'
 })`

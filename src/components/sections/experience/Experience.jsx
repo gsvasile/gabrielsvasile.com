@@ -3,13 +3,17 @@ import styled from 'styled-components';
 import backgrounds from '../../../assets/backgrounds/backgrounds';
 import ExperienceList from './ExperienceList';
 
-export default () =>
+const Experience = () =>
     <Section id='experience'>
         <Header>
             <SectionName>Experience</SectionName>
         </Header>
         <ExperienceList />
     </Section>;
+
+export default Experience;
+
+// Styled Components Section //
 
 const Section = styled.section.attrs({
     className: 'bg-center cover pb5'

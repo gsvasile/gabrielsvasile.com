@@ -50,7 +50,7 @@ const getSkillLists = () => {
 const getTemplateColumns = () => 'repeat(' + Object.keys(categoriesHeadings).length + ', 1fr)';
 const sortedCategories = Object.values(categoriesHeadings).sort();
 
-export default () => {
+export default function SkillDisplay() {
     let columnCountToPlace = 1;
     let numberOfRows = skillCategoryMap.length;
     return (
